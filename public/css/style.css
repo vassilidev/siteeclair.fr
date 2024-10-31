@@ -184,7 +184,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .hero-content {
@@ -662,7 +662,7 @@ footer {
     margin: 10px;
 }
 
-.footer-col h4 {
+.footer-col > h3, h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
     color: #fff;

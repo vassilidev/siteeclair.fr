@@ -398,7 +398,7 @@
         <div class="footer-top">
             <div class="footer-col">
                 <img src="{{ asset('logo.svg') }}" width="32" alt="">
-                <h4>Site Éclair</h4>
+                <h3>Site Éclair</h3>
                 <p>&copy; {{ date('Y') }} Site Éclair. Tous droits réservés.</p>
             </div>
             <div class="footer-col">
