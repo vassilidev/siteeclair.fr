@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Éclair - Votre site web rapide comme l'éclair</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha384-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha384-..." crossorigin="anonymous"/>
     <style>
         /* Styles pour les étoiles */
         .stars i {
@@ -19,7 +21,7 @@
         /* Variables de couleurs */
         :root {
             --primary-color: #FFA500; /* Orange vif */
-            --accent-color: #FFD700;  /* Jaune lumineux */
+            --accent-color: #FFD700; /* Jaune lumineux */
             --text-color: #333;
             --background-color: #F9F9F9;
             --section-background: #FFF;
@@ -44,6 +46,7 @@
         h1, h2, h3, h4, h5, h6 {
             color: var(--text-color);
             font-weight: 700;
+            line-height: 1.2;
         }
 
         a {
@@ -81,7 +84,7 @@
             background-color: var(--section-background);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 999;
-            padding: 25px 0;
+            padding: 15px 0;
         }
 
         .navbar .container {
@@ -91,9 +94,20 @@
         }
 
         .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 700;
+            display: flex;
+            align-items: center;
             color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .navbar-brand img {
+            height: 2.5rem;
+            margin-right: 10px;
+        }
+
+        .navbar-brand span {
+            display: inline-block;
         }
 
         .menu-toggle {
@@ -148,11 +162,12 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            top: 80px;
+            top: 60px;
             right: 20px;
             background-color: var(--section-background);
             border: 1px solid #ccc;
             border-radius: 5px;
+            width: 200px;
         }
 
         .navbar-links.active a {
@@ -161,7 +176,7 @@
 
         /* Hero Section */
         .hero-section {
-            background-image: url('https://placehold.co/1920x1080');
+            background-image: url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -171,6 +186,10 @@
             position: relative;
         }
 
+        .hero-content h1 {
+            color: white;
+        }
+
         .hero-section::before {
             content: "";
             position: absolute;
@@ -178,7 +197,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.4);
         }
 
         .hero-content {
@@ -186,6 +205,7 @@
             z-index: 1;
             text-align: center;
             width: 100%;
+            padding: 0 20px;
         }
 
         .hero-content h1 {
@@ -221,6 +241,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             text-align: center;
+            padding: 0 20px;
         }
 
         /* Method Section */
@@ -234,18 +255,31 @@
 
         .method-step {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .method-step i {
             font-size: 2rem;
             color: var(--primary-color);
             margin-right: 20px;
+            min-width: 40px;
+            text-align: center;
         }
 
         .method-step h3 {
             font-size: 1.5rem;
             margin-bottom: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .method-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .method-step i {
+                margin-bottom: 10px;
+            }
         }
 
         /* Features Section */
@@ -263,6 +297,7 @@
             flex: 1 1 250px;
             text-align: center;
             transition: transform 0.3s ease;
+            max-width: 300px;
         }
 
         .feature-item:hover {
@@ -278,6 +313,11 @@
         .feature-item h3 {
             margin-bottom: 15px;
             color: var(--text-color);
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
         }
 
         /* Pricing Section */
@@ -296,6 +336,7 @@
             text-align: left;
             transition: transform 0.3s ease;
             position: relative;
+            max-width: 350px;
         }
 
         .pricing-card:hover {
@@ -357,6 +398,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 10px;
+            max-width: 400px;
         }
 
         .portfolio-item img {
@@ -375,7 +417,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             opacity: 0;
             transition: opacity 0.3s ease;
             display: flex;
@@ -389,6 +431,8 @@
 
         .portfolio-overlay h3 {
             color: #fff;
+            text-align: center;
+            padding: 0 10px;
         }
 
         /* Team Section */
@@ -397,15 +441,20 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            align-items: stretch;
         }
 
         .team-card {
             background-color: #fff;
             border-radius: 10px;
             padding: 30px;
-            flex: 1 1 200px;
+            flex: 1 1 300px;
             text-align: center;
             transition: transform 0.3s ease;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .team-card:hover {
@@ -423,10 +472,13 @@
         .team-card h3 {
             margin-bottom: 5px;
             color: var(--text-color);
+            font-size: 1.2rem;
         }
 
         .team-card p {
             color: var(--primary-color);
+            font-size: 1rem;
+            margin-top: auto;
         }
 
         /* Testimonials Section */
@@ -438,6 +490,7 @@
             max-width: 800px;
             margin: 0 auto;
             position: relative;
+            padding: 0 20px;
         }
 
         .testimonial {
@@ -457,7 +510,7 @@
         }
 
         .testimonial p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.8;
             color: var(--text-color);
             margin-bottom: 20px;
@@ -466,6 +519,7 @@
         .testimonial h4 {
             color: var(--primary-color);
             margin-bottom: 10px;
+            font-size: 1rem;
         }
 
         .testimonial .stars {
@@ -482,11 +536,12 @@
             max-width: 800px;
             margin: 0 auto 10px;
             border-bottom: 1px solid #ccc;
+            padding: 0 20px;
         }
 
         .faq-question {
             font-weight: 600;
-            padding: 15px;
+            padding: 15px 0;
             cursor: pointer;
             position: relative;
         }
@@ -496,12 +551,12 @@
             font-family: 'Font Awesome 6 Free';
             font-weight: 900;
             position: absolute;
-            right: 15px;
+            right: 0;
         }
 
         .faq-answer {
             display: none;
-            padding: 0 15px 15px;
+            padding: 0 0 15px;
             line-height: 1.6;
         }
 
@@ -517,6 +572,7 @@
         .contact-section form {
             max-width: 600px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         .contact-section input, .contact-section textarea {
@@ -525,6 +581,7 @@
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1rem;
         }
 
         .contact-section button {
@@ -547,12 +604,13 @@
         footer {
             background-color: var(--footer-background);
             color: #fff;
-            padding: 60px 0;
+            padding: 40px 0;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
         .footer-top {
@@ -575,6 +633,7 @@
 
         .footer-col ul {
             list-style: none;
+            padding-left: 0;
         }
 
         .footer-col ul li {
@@ -600,6 +659,7 @@
         .footer-bottom p {
             margin: 0;
             color: #fff;
+            font-size: 0.9rem;
         }
 
         .social-icons {
@@ -643,16 +703,12 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .navbar-links {
-                display: none;
-            }
-
-            .navbar .container {
-                justify-content: space-between;
-            }
-
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
             }
 
             .features-grid, .pricing-grid, .team-grid, .portfolio-grid, .footer-top {
@@ -664,6 +720,14 @@
                 margin: 20px 0;
                 text-align: center;
             }
+
+            .pricing-card {
+                text-align: center;
+            }
+
+            .pricing-card ul {
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -672,7 +736,10 @@
 <!-- Menu amélioré -->
 <nav class="navbar">
     <div class="container">
-        <a href="#" class="navbar-brand">Site Éclair</a>
+        <a href="#" class="navbar-brand">
+            <img src="{{ asset('logo.svg') }}" alt="Logo Site Éclair">
+            <span>Site Éclair</span>
+        </a>
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -709,41 +776,43 @@
 
 <!-- Method Section -->
 <section id="method" class="method-section">
-    <h2>Notre Méthode de Travail</h2>
-    <div class="method-grid">
-        <div class="method-step">
-            <i class="fas fa-comments"></i>
-            <div>
-                <h3>1. Prise de Contact</h3>
-                <p>Nous discutons de vos besoins et objectifs pour définir le projet idéal.</p>
+    <div class="container">
+        <h2>Notre Méthode de Travail</h2>
+        <div class="method-grid">
+            <div class="method-step">
+                <i class="fas fa-comments"></i>
+                <div>
+                    <h3>1. Prise de Contact</h3>
+                    <p>Nous discutons de vos besoins et objectifs pour définir le projet idéal.</p>
+                </div>
             </div>
-        </div>
-        <div class="method-step">
-            <i class="fas fa-pencil-ruler"></i>
-            <div>
-                <h3>2. Conception & Design</h3>
-                <p>Création d'un design sur mesure qui reflète l'identité de votre marque.</p>
+            <div class="method-step">
+                <i class="fas fa-pencil-ruler"></i>
+                <div>
+                    <h3>2. Conception & Design</h3>
+                    <p>Création d'un design sur mesure qui reflète l'identité de votre marque.</p>
+                </div>
             </div>
-        </div>
-        <div class="method-step">
-            <i class="fas fa-code"></i>
-            <div>
-                <h3>3. Développement Rapide</h3>
-                <p>Développement de votre site avec une qualité exceptionnelle et un score Google PageSpeed Insights excellent.</p>
+            <div class="method-step">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>3. Développement Rapide</h3>
+                    <p>Développement de votre site avec une qualité exceptionnelle et un score Google PageSpeed Insights excellent.</p>
+                </div>
             </div>
-        </div>
-        <div class="method-step">
-            <i class="fas fa-sync-alt"></i>
-            <div>
-                <h3>4. Retours & Ajustements</h3>
-                <p>Retours illimités pour ajuster le site jusqu'à entière satisfaction.</p>
+            <div class="method-step">
+                <i class="fas fa-sync-alt"></i>
+                <div>
+                    <h3>4. Retours & Ajustements</h3>
+                    <p>Retours illimités pour ajuster le site jusqu'à entière satisfaction.</p>
+                </div>
             </div>
-        </div>
-        <div class="method-step">
-            <i class="fas fa-rocket"></i>
-            <div>
-                <h3>5. Mise en Ligne</h3>
-                <p>Mise en ligne de votre site, prêt à générer des interactions en un temps record.</p>
+            <div class="method-step">
+                <i class="fas fa-rocket"></i>
+                <div>
+                    <h3>5. Mise en Ligne</h3>
+                    <p>Mise en ligne de votre site, prêt à générer des interactions en un temps record.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -794,7 +863,7 @@
         <div class="pricing-card">
             <h3>Formule Éclair</h3>
             <p>Idéale pour une présence en ligne rapide et efficace.</p>
-            <div class="price">€590<span style="font-size: 0.6em;"> HT</span></div>
+            <div class="price">590 €<span style="font-size: 0.6em;"> HT</span></div>
             <ul>
                 <li><i class="fas fa-check"></i> Site One-Page + Page de Contact</li>
                 <li><i class="fas fa-check"></i> Design Personnalisé</li>
@@ -808,7 +877,7 @@
         <div class="pricing-card">
             <h3>Formule Avancée</h3>
             <p>Pour une présence en ligne plus complète.</p>
-            <div class="price">€990<span style="font-size: 0.6em;"> HT</span></div>
+            <div class="price">990 €<span style="font-size: 0.6em;"> HT</span></div>
             <ul>
                 <li><i class="fas fa-check"></i> Tout ce qui est inclus dans la Formule Éclair</li>
                 <li><i class="fas fa-check"></i> Site Multi-Pages (jusqu'à 5 pages)</li>
@@ -863,16 +932,18 @@
 <!-- Team Section -->
 <section id="team" class="team-section">
     <h2>Rencontrez Notre Équipe</h2>
-    <div class="container team-grid">
-        <div class="team-card">
-            <img src="https://placehold.co/150x150" alt="Vassili JOFFROY">
-            <h3>Vassili JOFFROY</h3>
-            <p>Président & Développeur Expert</p>
-        </div>
-        <div class="team-card">
-            <img src="https://placehold.co/150x150" alt="Noé CHAROUSSET">
-            <h3>Noé CHAROUSSET</h3>
-            <p>Directeur Général & Chef de Projet</p>
+    <div class="container">
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="https://placehold.co/150x150" alt="Vassili JOFFROY">
+                <h3>Vassili JOFFROY</h3>
+                <p>Président & Développeur Expert</p>
+            </div>
+            <div class="team-card">
+                <img src="https://placehold.co/150x150" alt="Noé CHAROUSSET">
+                <h3>Noé CHAROUSSET</h3>
+                <p>Directeur Général & Chef de Projet</p>
+            </div>
         </div>
     </div>
 </section>
