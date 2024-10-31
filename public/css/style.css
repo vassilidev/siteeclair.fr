@@ -7,8 +7,8 @@
 
 /* Variables de couleurs */
 :root {
-    --primary-color: #FFA500; /* Orange vif */
-    --accent-color: #FFD700; /* Jaune lumineux */
+    --primary-color: #FFB86C; /* Orange vif */
+    --accent-color: #ce9456; /* Jaune lumineux */
     --text-color: #333;
     --background-color: #F9F9F9;
     --section-background: #FFF;
@@ -324,6 +324,7 @@ section h2 {
     transition: transform 0.3s ease;
     position: relative;
     max-width: 350px;
+    border: 2px solid transparent; /* Add border for highlighted effect */
 }
 
 .pricing-card:hover {
@@ -371,6 +372,55 @@ section h2 {
     border-radius: 50px;
     font-size: 0.9rem;
 }
+
+/* Styles spécifiques pour l'offre populaire */
+.pricing-card.popular {
+    background-color: #f9f9f9;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card.popular h3 {
+    color: var(--primary-color);
+}
+
+.popular-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+.popular-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Style pour l'offre sur devis */
+.custom-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--text-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+}
+
+.custom-btn {
+    background-color: var(--text-color);
+    color: #fff;
+}
+
+.custom-btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Correction de l'alignement du texte */
+.centered-text {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
 
 /* Portfolio Section */
 .portfolio-grid {
@@ -663,29 +713,6 @@ footer {
 
 .social-icons a:hover {
     color: var(--accent-color);
-}
-
-/* Chatbot Bubble */
-.chatbot-bubble {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-}
-
-.chatbot-bubble:hover {
-    background-color: var(--accent-color);
 }
 
 /* Responsive */

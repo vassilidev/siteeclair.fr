@@ -85,7 +85,7 @@
     <div class="hero-content container">
         <h1>Votre site web sur mesure, rapide comme l'éclair</h1>
         <p>Des sites performants, évolutifs et abordables, sans compromis sur la qualité.</p>
-        <a href="#contact" class="btn">Démarrez Maintenant</a>
+        <a href="#about" class="btn">Démarrez Maintenant</a>
     </div>
 </section>
 
@@ -183,7 +183,8 @@
     <h2>Nos Offres</h2>
     <p class="centered-text">Des solutions adaptées à chaque besoin et budget.</p>
     <div class="container pricing-grid">
-        <div class="pricing-card">
+        <div class="pricing-card popular">
+            <div class="popular-badge">Le plus populaire</div>
             <h3>Formule Éclair</h3>
             <p>Idéale pour une présence en ligne rapide et efficace.</p>
             <div class="price">590 €<span style="font-size: 0.6em;"> HT</span></div>
@@ -195,7 +196,7 @@
                 <li><i class="fas fa-check"></i> Optimisation SEO de Base</li>
                 <li><i class="fas fa-check"></i> Support Réactif 24/7</li>
             </ul>
-            <a href="#contact" class="btn">Choisir</a>
+            <a href="#contact" class="btn popular-btn">Choisir</a>
         </div>
         <div class="pricing-card">
             <h3>Formule Avancée</h3>
@@ -211,7 +212,7 @@
             <a href="#contact" class="btn">Choisir</a>
         </div>
         <div class="pricing-card">
-            <div class="popular-badge">Sur Devis</div>
+            <div class="custom-badge">Sur Devis</div>
             <h3>Formule Sur Mesure</h3>
             <p>Pour des solutions entièrement personnalisées.</p>
             <div class="price">Sur Devis</div>
@@ -222,7 +223,7 @@
                 <li><i class="fas fa-check"></i> Maintenance &amp; Évolution Dédiées</li>
                 <li><i class="fas fa-check"></i> Stratégie Digitale Personnalisée</li>
             </ul>
-            <a href="https://votre-autre-site.com" class="btn">Demander un Devis</a>
+            <a href="#contact" class="btn custom-btn">Demander un Devis</a>
         </div>
     </div>
 </section>
@@ -258,12 +259,12 @@
     <div class="container">
         <div class="team-grid">
             <div class="team-card">
-                <img src="https://placehold.co/150x150" alt="Vassili JOFFROY - Président & Développeur Expert">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQG2KPGca324zA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708702714017?e=1735776000&v=beta&t=Qph1JOUftoDzuulCxBWSOyyiw8LBj2SIl8jH-ggW934" alt="Vassili JOFFROY - Président & Développeur Expert">
                 <h3>Vassili JOFFROY</h3>
                 <p>Président &amp; Développeur Expert</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/150x150" alt="Noé CHAROUSSET - Directeur Général & Chef de Projet">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEp7OUnr7oIxw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681208563507?e=1735776000&v=beta&t=AYsOB3_EnmYJslcVC7wrqY1tXkbETHD4tGK2yzfj8Is" alt="Noé CHAROUSSET - Directeur Général & Chef de Projet">
                 <h3>Noé CHAROUSSET</h3>
                 <p>Directeur Général &amp; Chef de Projet</p>
             </div>
@@ -276,25 +277,53 @@
     <h2>Vos Témoignages</h2>
     <div class="testimonials-slider">
         <div class="testimonial active">
-            <p>"Grâce à Site Éclair, j'ai pu lancer mon site professionnel en un temps record. L'équipe a été très réactive et à l'écoute de mes besoins."</p>
+            <p>"Je recommande fortement Site Éclair pour son professionnalisme, sa réactivité et sa disponibilité de tous les instants. Les développements sont rapides, précis et fiables, c'est le type de collaboration qui rassure. La grande autonomie dans la prise de décision en fait un collaborateur freelance de premier plan."</p>
             <div class="stars">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <h4>- Marie Dupont</h4>
+            <h4>- Michael, Unitead</h4>
         </div>
         <div class="testimonial">
-            <p>"Un service de qualité avec un excellent rapport qualité-prix. Je recommande vivement Site Éclair."</p>
+            <p>"Site Éclair a su créer la plateforme et le site dont nous avions besoin. Ils connaissent leur métier sur le bout des doigts. Merci pour votre professionnalisme."</p>
             <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <h4>- Paul Laurent</h4>
+            <h4>- Diag Power</h4>
         </div>
         <div class="testimonial">
-            <p>"Mon site est exactement comme je l'imaginais. L'équipe a su comprendre mes attentes et les réaliser parfaitement."</p>
+            <p>"Un beau travail réalisé permettant à l’avenir de limiter les erreurs humaines et d’abaisser la charge mentale de la direction de notre organisme."</p>
             <div class="stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <h4>- Sophie Martin</h4>
+            <h4>- Stephen, Organisme C3</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Comme toujours, rapide et efficace ! Ils répondent toujours présents, même pour les missions les plus complexes. Je ne peux que les recommander."</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h4>- Morine</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Je recommande le travail de Site Éclair. Nous souhaitions collaborer pour le développement d'API avec notre site. Les échanges ont été fructueux et rapides. Site Éclair est professionnel et s'engage en connaissance de cause."</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h4>- Tanguy, Piba Location</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Excellent prestataire : rapide, efficace et investi. Je recommande vivement pour toutes leurs qualités et leur expertise."</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h4>- Yannick</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Site Éclair est extrêmement doué dans ce qu’ils font, prix très attractif avec un grand accompagnement, très à l’écoute. Je recommande à 100% les yeux fermés."</p>
+            <div class="stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <h4>- Margot</h4>
         </div>
     </div>
 </section>
@@ -305,9 +334,47 @@
     <div class="container">
         <div class="faq-item">
             <div class="faq-question">Quels sont les délais de livraison pour les offres ?</div>
-            <div class="faq-answer">Pour la Formule Éclair, nous livrons votre site en 5 jours ouvrés. Pour la Formule Avancée, le délai est de 10 jours ouvrés.</div>
+            <div class="faq-answer">Pour la Formule Éclair, nous livrons votre site en 5 jours ouvrés. Pour la Formule
+                Avancée, le délai est de 10 jours ouvrés.
+            </div>
         </div>
-        <!-- Autres items de FAQ -->
+        <div class="faq-item">
+            <div class="faq-question">Puis-je modifier mon site après la mise en ligne ?</div>
+            <div class="faq-answer">Oui, vous pouvez modifier le contenu (images, textes) facilement sans notre
+                intervention. Pour des modifications structurelles, notre équipe est là pour vous assister rapidement.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Le site sera-t-il optimisé pour les moteurs de recherche ?</div>
+            <div class="faq-answer">Absolument, tous nos sites sont optimisés pour le SEO avec un excellent score sur
+                Google PageSpeed Insights, prêts pour vos campagnes SEA.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Proposez-vous un support après la livraison ?</div>
+            <div class="faq-answer">Oui, nous offrons un support réactif 24/7 avec des contrats de maintenance et
+                d'évolution dédiés.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Mon site peut-il évoluer avec mon entreprise ?</div>
+            <div class="faq-answer">Tout à fait, nos sites sont conçus pour être évolutifs. Vous pouvez intégrer de
+                nouvelles fonctionnalités, des APIs et des outils pour accompagner la croissance de votre entreprise.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Quelles technologies utilisez-vous pour développer les sites ?</div>
+            <div class="faq-answer">Nous utilisons des technologies modernes et performantes, et sommes experts en
+                Laravel et Supermalter pour garantir la qualité et l'évolutivité de votre site.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Proposez-vous des solutions pour la transformation digitale ?</div>
+            <div class="faq-answer">Oui, nous vous accompagnons dans votre transformation digitale en intégrant des
+                outils qui vous permettent de gagner du temps et d'apporter de la valeur là où vous êtes réellement
+                professionnel.
+            </div>
+        </div>
     </div>
 </section>
 
@@ -328,8 +395,9 @@
     <div class="footer-content">
         <div class="footer-top">
             <div class="footer-col">
+                <img src="{{ asset('logo.svg') }}" width="32" alt="">
                 <h4>Site Éclair</h4>
-                <p>&copy; 2023 Site Éclair. Tous droits réservés.</p>
+                <p>&copy; {{ date('Y') }} Site Éclair. Tous droits réservés.</p>
             </div>
             <div class="footer-col">
                 <h4>Liens Utiles</h4>
@@ -356,10 +424,19 @@
     </div>
 </footer>
 
-<!-- Bulle de Chatbot -->
-<div class="chatbot-bubble">
-    <i class="fas fa-comments"></i>
-</div>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6723c2382480f5b4f596de67/1ibhqtb7o';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 
 <!-- Scripts -->
 <script src="{{ asset('js/script.js') }}"></script>
