@@ -55,7 +55,8 @@
                 </span>
                     <div>
                         <h3>3. Développement Rapide</h3>
-                        <p>Développement de votre site avec une qualité exceptionnelle et un excellent score Google PageSpeed Insights.</p>
+                        <p>Développement de votre site avec une qualité exceptionnelle et un excellent score Google
+                            PageSpeed Insights.</p>
                     </div>
                 </div>
                 <div class="method-step">
@@ -91,7 +92,8 @@
             <div class="feature-item">
                 <i class="fas fa-shield-alt fa-xl"></i>
                 <h3>Sécurité Renforcée</h3>
-                <p>Notre solution sans WordPress assure une sécurité optimale et réduit les risques de vulnérabilité.</p>
+                <p>Notre solution sans WordPress assure une sécurité optimale et réduit les risques de
+                    vulnérabilité.</p>
             </div>
             <div class="feature-item">
                 <i class="fas fa-user-edit fa-xl"></i>
@@ -126,53 +128,66 @@
         </div>
     </section>
 
-
     <!-- Section Offres -->
     <section id="pricing" class="pricing-section">
         <h2>Nos Offres</h2>
         <p class="centered-text">Des solutions adaptées à chaque besoin et budget.</p>
         <div class="container pricing-grid">
+            <!-- Formule Éclair -->
             <div class="pricing-card popular">
                 <div class="popular-badge">Le plus populaire</div>
                 <h3>Formule Éclair</h3>
                 <p>Idéale pour une présence en ligne rapide et efficace.</p>
-                <div class="price">590 €<span style="font-size: 0.6em;"> HT</span></div>
+                <div class="price">490 €<span style="font-size: 0.6em;"> HT</span></div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Site One-Page + Page de Contact</li>
-                    <li><i class="fas fa-check"></i> Design Personnalisé</li>
-                    <li><i class="fas fa-check"></i> Hébergement &amp; Nom de Domaine Inclus</li>
-                    <li><i class="fas fa-check"></i> Retours Visuels Illimités</li>
-                    <li><i class="fas fa-check"></i> Optimisation SEO de Base</li>
-                    <li><i class="fas fa-check"></i> Support Réactif 24/7</li>
+                    <li><i class="fas fa-check"></i> Site One-Page (style landing, small business)</li>
+                    <li><i class="fas fa-check"></i> Design Personnalisé via Template</li>
+                    <li><i class="fas fa-check"></i> Formulaire de Contact</li>
+                    <li><i class="fas fa-check"></i> SEO de Base</li>
+                    <li><i class="fas fa-check"></i> Maintenance Annuelle Incluse</li>
+                    <li><i class="fas fa-check"></i> Hébergement Inclus (1 an)</li>
+                    <li><i class="fas fa-check"></i> Transfert de Nom de Domaine (offert)</li>
                 </ul>
-                <a href="#contact" class="btn popular-btn">Choisir</a>
+                <div class="btn-container">
+                    <a href="#contact" class="btn popular-btn">Choisir</a>
+                </div>
             </div>
+
+            <!-- Formule Foudre -->
             <div class="pricing-card">
-                <h3>Formule Avancée</h3>
-                <p>Pour une présence en ligne plus complète.</p>
-                <div class="price">990 €<span style="font-size: 0.6em;"> HT</span></div>
+                <h3>Formule Foudre</h3>
+                <p>Pour une présence en ligne complète et puissante.</p>
+                <div class="price">680 €<span style="font-size: 0.6em;"> HT</span></div>
                 <ul>
                     <li><i class="fas fa-check"></i> Tout ce qui est inclus dans la Formule Éclair</li>
-                    <li><i class="fas fa-check"></i> Site Multi-Pages (jusqu'à 5 pages)</li>
-                    <li><i class="fas fa-check"></i> Fonctionnalités Basiques (Galerie, Blog)</li>
-                    <li><i class="fas fa-check"></i> Site Multilingue</li>
-                    <li><i class="fas fa-check"></i> Optimisation SEO Avancée</li>
+                    <li><i class="fas fa-check"></i> Site Multi-Pages</li>
+                    <li><i class="fas fa-check"></i> SEO Avancé avec Accompagnement</li>
+                    <li><i class="fas fa-check"></i> Gestion Multilingue (jusqu'à 3 langues)</li>
+                    <li><i class="fas fa-check"></i> Support Premium 24/7</li>
+                    <li><i class="fas fa-check"></i> Sauvegarde Automatique Mensuelle</li>
                 </ul>
-                <a href="#contact" class="btn">Choisir</a>
+                <div class="btn-container">
+                    <a href="#contact" class="btn">Choisir</a>
+                </div>
             </div>
+
+            <!-- Formule Tempête (Sur Devis) -->
             <div class="pricing-card">
-                <div class="custom-badge">Sur Devis</div>
-                <h3>Formule Sur Mesure</h3>
-                <p>Pour des solutions entièrement personnalisées.</p>
+                <div class="custom-badge">Personnalisé</div>
+                <h3>Formule Tempête</h3>
+                <p>Solution sur mesure pour des projets ambitieux et évolutifs.</p>
                 <div class="price">Sur Devis</div>
                 <ul>
-                    <li><i class="fas fa-check"></i> Analyse Approfondie de Vos Besoins</li>
-                    <li><i class="fas fa-check"></i> Développement de Fonctionnalités Avancées</li>
-                    <li><i class="fas fa-check"></i> Intégration d'APIs et Outils Spécifiques</li>
-                    <li><i class="fas fa-check"></i> Maintenance &amp; Évolution Dédiées</li>
-                    <li><i class="fas fa-check"></i> Stratégie Digitale Personnalisée</li>
+                    <li><i class="fas fa-check"></i> Tout ce qui est inclus dans la Formule Foudre</li>
+                    <li><i class="fas fa-check"></i> Développement d'Applications et Back Office Complet</li>
+                    <li><i class="fas fa-check"></i> Intégration d'APIs Spécifiques et Modules Intelligents</li>
+                    <li><i class="fas fa-check"></i> Création d'APIs Personnalisées</li>
+                    <li><i class="fas fa-check"></i> Support et Maintenance Personnalisés</li>
+                    <li><i class="fas fa-check"></i> Assistance Transfert et Formation</li>
                 </ul>
-                <a href="#contact" class="btn custom-btn">Demander un Devis</a>
+                <div class="btn-container">
+                    <a href="#contact" class="btn custom-btn">Demander un Devis</a>
+                </div>
             </div>
         </div>
     </section>
