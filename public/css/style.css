@@ -319,42 +319,76 @@ section h2 {
 }
 
 /* Method Section */
+/* Method Section */
 .method-grid {
     display: flex;
     flex-direction: column;
     gap: 30px;
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    padding-left: 60px; /* Space for the line on the left */
 }
 
+/* Timeline Line - Passe au milieu des icônes */
+.method-line {
+    position: absolute;
+    top: 0;
+    left: 40px; /* Adjusted to make the line pass through the middle of the icon circles */
+    width: 3px;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+/* Individual Steps */
 .method-step {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Ensure steps appear above the line */
+    gap: 20px; /* Add space between icon and text */
+}
+
+.icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color); /* Background color */
+    width: 50px; /* Fixed size for circle */
+    height: 50px;
+    border-radius: 50%;
+    color: #fff; /* White icon color */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
 }
 
 .method-step i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-right: 20px;
-    min-width: 40px;
-    text-align: center;
+    color: #fff; /* Icon color */
 }
 
+/* Style for heading and paragraph */
 .method-step h3 {
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
 
+.method-step p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 600px) {
     .method-step {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
 
-    .method-step i {
-        margin-bottom: 10px;
+    .method-line {
+        left: 50%; /* Adjust the line for smaller screens if needed */
     }
 }
+
 
 /* Features Section */
 .features-grid {
