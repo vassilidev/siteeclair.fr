@@ -498,6 +498,10 @@ section h2 {
 
 /* Responsive Adjustments */
 @media (max-width: 600px) {
+    .method-grid {
+        padding-left: 0;
+    }
+
     .method-step {
         flex-direction: column;
         align-items: center;
@@ -505,7 +509,7 @@ section h2 {
     }
 
     .method-line {
-        left: 50%; /* Adjust the line for smaller screens if needed */
+        display: none;
     }
 }
 
