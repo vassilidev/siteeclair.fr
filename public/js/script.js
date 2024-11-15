@@ -2,11 +2,11 @@
 const testimonials = document.querySelectorAll('.testimonial');
 let currentTestimonial = 0;
 
-setInterval(() => {
-    testimonials[currentTestimonial].classList.remove('active');
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    testimonials[currentTestimonial].classList.add('active');
-}, 5000);
+// setInterval(() => {
+//     testimonials[currentTestimonial].classList.remove('active');
+//     currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+//     testimonials[currentTestimonial].classList.add('active');
+// }, 5000);
 
 // Accordéon FAQ
 let faqItems = document.querySelectorAll('.faq-item');

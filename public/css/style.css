@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Styles pour les étoiles */
 .stars i {
     color: #FFD700;
@@ -64,9 +68,57 @@ a {
 }
 
 /* Styles pour le menu amélioré */
-.navbar {
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-color); /* Adjust for your palette */
+    color: var(--text-color);
+    font-size: 0.9rem;
+    padding: 5px 0;
     position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .status {
+    font-weight: bold;
+}
+
+.top-bar .status .badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e8f5e9; /* Light green background */
+    color: #4caf50; /* Green text */
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+.top-bar .status .badge i {
+    margin-right: 5px;
+    font-size: 0.7rem;
+}
+
+.top-bar .contact-info span {
+    display: inline-flex;
+    align-items: center;
+}
+
+.top-bar .contact-info i {
+    margin-right: 5px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 40px; /* Adjusted to make space for the top bar */
     width: 100%;
     background-color: var(--section-background);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -170,11 +222,8 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-}
-
-.hero-content h1 {
-    color: white;
 }
 
 .hero-section::before {
@@ -198,12 +247,50 @@ a {
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: white;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+
+/* Scroll Arrow */
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.scroll-arrow a {
+    color: #fff;
+    font-size: 2rem; /* Adjust size of the icon */
+    animation: bounce 1.5s infinite;
+    opacity: 0.8;
+    text-decoration: none;
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-arrow a:hover {
+    opacity: 1;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
 
 /* Sections */
 section {

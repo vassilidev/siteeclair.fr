@@ -1,3 +1,18 @@
+<div class="top-bar">
+    <div class="container">
+        <div class="status">
+            <span class="badge">
+                <i class="fas fa-circle"></i> Disponible
+            </span>
+        </div>
+        <div class="contact-info">
+            <span>
+                <i class="fas fa-phone-alt"></i> +33 6 12 34 56 78
+            </span>
+        </div>
+    </div>
+</div>
+
 <nav class="navbar">
     <div class="container">
         <a href="#" class="navbar-brand">
