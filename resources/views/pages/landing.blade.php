@@ -132,7 +132,7 @@
     <!-- Section Offres -->
     <section id="pricing" class="pricing-section">
         <h2>Nos Offres</h2>
-        <p class="centered-text">Des solutions adaptées à chaque besoin et budget.</p>
+        <p class="centered-text">Des solutions adaptées à chaque besoin et budget.</p><br>
         <div class="container pricing-grid">
             <!-- Formule Éclair -->
             <div class="pricing-card popular">
