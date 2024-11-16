@@ -2,6 +2,7 @@
 
 @section('content')
     <section class="hero-section">
+        <div id="particles-js"></div>
         <div class="hero-content container">
             <h1>Votre site web sur mesure, rapide comme l'éclair</h1>
             <p>Des sites performants, évolutifs et abordables, sans compromis sur la qualité.</p>
@@ -226,13 +227,13 @@
                     <img src="https://media.licdn.com/dms/image/v2/D4E03AQG2KPGca324zA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708702714017?e=1735776000&v=beta&t=Qph1JOUftoDzuulCxBWSOyyiw8LBj2SIl8jH-ggW934"
                          alt="Vassili JOFFROY - Président & Développeur Expert">
                     <h3>Vassili JOFFROY</h3>
-                    <p>Président &amp; Développeur Expert</p>
+                    <p>Développeur & Intégrateur</p>
                 </div>
                 <div class="team-card">
                     <img src="https://media.licdn.com/dms/image/v2/D5603AQEp7OUnr7oIxw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1681208563507?e=1735776000&v=beta&t=AYsOB3_EnmYJslcVC7wrqY1tXkbETHD4tGK2yzfj8Is"
                          alt="Noé CHAROUSSET - Directeur Général & Chef de Projet">
                     <h3>Noé CHAROUSSET</h3>
-                    <p>Directeur Général &amp; Chef de Projet</p>
+                    <p>Chef de Projet & Relation client</p>
                 </div>
             </div>
         </div>

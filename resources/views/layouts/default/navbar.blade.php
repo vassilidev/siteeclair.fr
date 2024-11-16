@@ -2,13 +2,13 @@
     <div class="container">
         <div class="status">
             <span class="badge">
-                <i class="fas fa-circle"></i> Disponible
+                <i class="fas fa-circle"></i> <span class="status-text">Disponible</span>
             </span>
         </div>
         <div class="contact-info">
-            <span>
-                <i class="fas fa-phone-alt"></i> +33 6 12 34 56 78
-            </span>
+            <a href="tel:+33612345678">
+                +33 6 12 34 56 78 <i class="fas fa-phone-alt"></i>
+            </a>
         </div>
     </div>
 </div>

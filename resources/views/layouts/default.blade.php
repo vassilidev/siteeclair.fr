@@ -41,6 +41,7 @@
     </script>
 @endproduction
 
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script src="{{ asset('js/script.js') }}" defer></script>
 </body>
 </html>
