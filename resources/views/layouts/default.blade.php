@@ -6,16 +6,19 @@
 
     {!! SEO::generate() !!}
 
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
           media="print" onload="this.media='all'">
 
-    <!-- Polices et CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
           defer crossorigin="anonymous"/>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <script src="{{ asset('particles.min.js') }}" defer></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="icon" type="image/png" href="{{ asset('favicon-96x96.png') }}" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}"/>
@@ -25,6 +28,8 @@
     <link rel="manifest" href="{{ asset('site.webmanifest') }}"/>
 </head>
 <body>
+<div id="cursor"></div>
+
 @include('layouts.default.navbar')
 
 <main>
@@ -46,8 +51,5 @@
         })();
     </script>
 @endproduction
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script src="{{ asset('js/script.js') }}" defer></script>
 </body>
 </html>
