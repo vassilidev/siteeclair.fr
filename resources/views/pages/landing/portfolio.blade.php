@@ -1,23 +1,24 @@
 <section id="portfolio" class="portfolio-section">
     <h2>Nos Réalisations</h2>
     <div class="container portfolio-grid">
-        <div class="portfolio-item">
-            <img src="https://placehold.co/600x400?text=Projet+1" alt="Site Vitrine Entreprise A">
+        <a class="portfolio-item" target="_blank" href="https://shoptuningfiles.com">
+            <img src="{{ asset('img/portfolio/portfolio-shoptuningfiles.png') }}" alt="Shop Tuning Files">
             <div class="portfolio-overlay">
-                <h3>Site Vitrine Entreprise A</h3>
+                <h3>Shop Tuning Files</h3>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="https://placehold.co/600x400?text=Projet+2" alt="Portfolio Artiste B">
+        </a>
+        <a class="portfolio-item" target="_blank" href="https://canchloe.com">
+            <img src="{{ asset('img/portfolio/portfolio-canchloe.png') }}" alt="La villa Can Chloe">
             <div class="portfolio-overlay">
-                <h3>Portfolio Artiste B</h3>
+                <h3>La villa Can Chloe</h3>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <img src="https://placehold.co/600x400?text=Projet+3" alt="Boutique en Ligne C">
+        </a>
+        <a class="portfolio-item" target="_blank" href="https://connaitre-comprendre-construire.fr">
+            <img src="{{ asset('img/portfolio/portfolio-connaitre-comprendre-construire.png') }}"
+                 alt="Connaître, Comprendre, Construire, CFDT">
             <div class="portfolio-overlay">
-                <h3>Boutique en Ligne C</h3>
+                <h3>Connaître, Comprendre, Construire, CFDT</h3>
             </div>
-        </div>
+        </a>
     </div>
 </section>
