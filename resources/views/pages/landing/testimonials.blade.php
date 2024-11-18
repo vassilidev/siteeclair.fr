@@ -10,126 +10,107 @@
             </span>
         </div>
     </div>
-    <p class="section-description">Découvrez + de 100 avis de nos clients professionnels sur TFA, Site Éclair et via
-        Malt.</p>
+    <p class="section-description">Découvrez comment Site Éclair et TFA transforment vos idées en solutions
+        performantes.</p>
     <div class="testimonial-container">
         <div class="testimonial-grid">
             <!-- Testimonial 1 -->
             <div class="testimonial-card">
                 <div class="testimonial-badge">TFA</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Jean Dupont">
+                    <img src="https://ui-avatars.com/api/?name=Diag+Power&background=BD93F9&color=282A36&rounded=true&size=64"
+                         alt="Diag Power">
                     <div>
-                        <h3>Jean Dupont</h3>
-                        <p class="role">Développeur Laravel</p>
+                        <h3>Diag Power</h3>
+                        <p class="role">Directeur Technique</p>
                     </div>
                 </div>
-                <p class="testimonial-text">En travaillant avec TFA, j'ai conçu une application Laravel sur mesure,
-                    performante et évolutive. Une expérience très professionnelle.</p>
+                <p class="testimonial-text">
+                    Très bon, il sait de quoi il parle, très très professionnel. Qualité au rendez-vous, merci beaucoup
+                    pour votre travail. Vassili a su créer une plate-forme et un site parfaitement adaptés à nos
+                    besoins.
+                </p>
             </div>
             <!-- Testimonial 2 -->
             <div class="testimonial-card">
                 <div class="testimonial-badge">Site Éclair</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Marie Leblanc">
+                    <img src="https://ui-avatars.com/api/?name=Stephen+C3&background=50FA7B&color=282A36&rounded=true&size=64"
+                         alt="Stephen">
                     <div>
-                        <h3>Marie Leblanc</h3>
-                        <p class="role">Entrepreneure</p>
+                        <h3>Stephen</h3>
+                        <p class="role">Organisme C3</p>
                     </div>
                 </div>
-                <p class="testimonial-text">Site Éclair m'a fourni un site rapide, moderne et adapté à mes besoins en
-                    moins de 5 jours. Je recommande vivement.</p>
+                <p class="testimonial-text">
+                    Comme toujours, une intervention rapide et irréprochable. Les solutions proposées dépassent souvent
+                    nos attentes. Site Éclair a permis une meilleure organisation et productivité de notre organisme.
+                </p>
             </div>
             <!-- Testimonial 3 -->
             <div class="testimonial-card">
-                <div class="testimonial-badge">Malt</div>
+                <div class="testimonial-badge">TFA</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Paul Morel">
+                    <img src="https://ui-avatars.com/api/?name=Michael+Unitead&background=FF79C6&color=282A36&rounded=true&size=64"
+                         alt="Michael">
                     <div>
-                        <h3>Paul Morel</h3>
-                        <p class="role">Consultant IT</p>
+                        <h3>Michael</h3>
+                        <p class="role">Unitead</p>
                     </div>
                 </div>
-                <p class="testimonial-text">Grâce à TFA via Malt, j'ai pu bénéficier d'un service de qualité pour
-                    développer une plateforme B2B. Un accompagnement au top !</p>
+                <p class="testimonial-text">
+                    Excellents échanges avec Vassili. Une compréhension parfaite des enjeux et des objectifs, une
+                    collaboration au top. Grâce à TFA, nous avons développé une solution sur-mesure et évolutive.
+                </p>
             </div>
             <!-- Testimonial 4 -->
             <div class="testimonial-card">
-                <div class="testimonial-badge">TFA</div>
+                <div class="testimonial-badge">Site Éclair</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Claire Morel">
+                    <img src="https://ui-avatars.com/api/?name=Morine+Mallet&background=8BE9FD&color=282A36&rounded=true&size=64"
+                         alt="Morine">
                     <div>
-                        <h3>Claire Morel</h3>
-                        <p class="role">Consultante</p>
+                        <h3>Morine Mallet</h3>
+                        <p class="role">Entrepreneure</p>
                     </div>
                 </div>
-                <p class="testimonial-text">TFA m'a accompagnée dans la refonte complète de mon site. Leur expertise en
-                    Laravel est incroyable.</p>
+                <p class="testimonial-text">
+                    Comme d'habitude, rapide et efficace ! Site Éclair répond toujours présent, même sur des missions
+                    complexes. Je ne peux que recommander pour leur professionnalisme et leur engagement.
+                </p>
             </div>
             <!-- Testimonial 5 -->
             <div class="testimonial-card">
-                <div class="testimonial-badge">Site Éclair</div>
+                <div class="testimonial-badge">TFA</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Thomas Roy">
+                    <img src="https://ui-avatars.com/api/?name=Tanguy+Piba&background=FFB86C&color=282A36&rounded=true&size=64"
+                         alt="Tanguy">
                     <div>
-                        <h3>Thomas Roy</h3>
-                        <p class="role">Freelance</p>
+                        <h3>Tanguy</h3>
+                        <p class="role">Piba Location</p>
                     </div>
                 </div>
-                <p class="testimonial-text">Site Éclair m'a permis d'obtenir un site clé en main rapidement, parfait
-                    pour développer mon activité.</p>
+                <p class="testimonial-text">
+                    Je recommande le travail de Vassili pour le développement d'API avec notre site. TFA a permis de
+                    créer une solution stable et adaptée à nos besoins. Professionnalisme et rapidité au rendez-vous !
+                </p>
             </div>
             <!-- Testimonial 6 -->
             <div class="testimonial-card">
-                <div class="testimonial-badge">Malt</div>
-                <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Sophie Delacroix">
-                    <div>
-                        <h3>Sophie Delacroix</h3>
-                        <p class="role">Responsable marketing</p>
-                    </div>
-                </div>
-                <p class="testimonial-text">Via Malt, j'ai collaboré avec TFA pour développer une solution digitale
-                    performante. Je recommande fortement.</p>
-            </div>
-            <!-- Testimonial 7 -->
-            <div class="testimonial-card">
                 <div class="testimonial-badge">TFA</div>
                 <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Marc Dupuis">
+                    <img src="https://ui-avatars.com/api/?name=Yannick+LeVaillant&background=FF5555&color=F8F8F2&rounded=true&size=64"
+                         alt="Yannick Le Vaillant">
                     <div>
-                        <h3>Marc Dupuis</h3>
-                        <p class="role">Photographe</p>
+                        <h3>Yannick Le Vaillant</h3>
+                        <p class="role">Consultant Digital</p>
                     </div>
                 </div>
-                <p class="testimonial-text">Grâce à TFA, j'ai obtenu une galerie photo performante en ligne. Très
-                    satisfait du résultat.</p>
-            </div>
-            <!-- Testimonial 8 -->
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Site Éclair</div>
-                <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Nicolas Fabre">
-                    <div>
-                        <h3>Nicolas Fabre</h3>
-                        <p class="role">Développeur Backend</p>
-                    </div>
-                </div>
-                <p class="testimonial-text">Site Éclair a su répondre à mes besoins rapidement. Un site optimisé et prêt
-                    pour mes futurs projets professionnels.</p>
-            </div>
-            <!-- Testimonial 9 -->
-            <div class="testimonial-card">
-                <div class="testimonial-badge">Malt</div>
-                <div class="testimonial-header">
-                    <img src="https://via.placeholder.com/50" alt="Julie Martin">
-                    <div>
-                        <h3>Julie Martin</h3>
-                        <p class="role">Chef de projet</p>
-                    </div>
-                </div>
-                <p class="testimonial-text">Une excellente collaboration via Malt avec TFA. Mon site est magnifique et
-                    performant.</p>
+                <p class="testimonial-text">
+                    Excellent prestataire : rapide, efficace et investi. Grâce à TFA, nous avons pu intégrer des
+                    solutions digitales innovantes en un temps record. Je recommande vivement pour son expertise et son
+                    engagement.
+                </p>
             </div>
         </div>
         <div class="fade-bottom"></div>

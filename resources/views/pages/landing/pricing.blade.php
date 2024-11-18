@@ -18,7 +18,7 @@
                 <li><i class="fas fa-check"></i> Transfert de Nom de Domaine (offert)</li>
             </ul>
             <div class="btn-container">
-                <a href="#contact" class="btn popular-btn">Choisir</a>
+                <a href="#" class="btn popular-btn">Choisir</a>
             </div>
         </div>
 
@@ -36,7 +36,7 @@
                 <li><i class="fas fa-check"></i> Sauvegarde Automatique Mensuelle</li>
             </ul>
             <div class="btn-container">
-                <a href="#contact" class="btn">Choisir</a>
+                <a href="#" class="btn">Choisir</a>
             </div>
         </div>
 

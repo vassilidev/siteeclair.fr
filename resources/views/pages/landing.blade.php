@@ -16,4 +16,6 @@
     @include('pages.landing.testimonials')
 
     @include('pages.landing.faq')
+
+    @include('pages.landing.contact')
 @endsection

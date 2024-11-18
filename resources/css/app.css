@@ -679,13 +679,6 @@ section h2 {
     font-weight: 600;
 }
 
-.team-card p {
-    color: var(--primary-color);
-    font-size: 1rem;
-    margin-top: 5px;
-    line-height: 1.5;
-}
-
 .team-card .role {
     font-size: 0.9rem;
     color: var(--text-color);
@@ -988,6 +981,7 @@ section:nth-child(even) {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    width: 200px;
 }
 
 .btn-view-more:hover {
@@ -1088,4 +1082,33 @@ section:nth-child(even) {
     .testimonial-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+.contact-section {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 50px 20px;
+    border-top: 5px solid var(--primary-color);
+}
+
+.contact-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--accent-color);
+}
+
+.contact-content {
+    margin: 0 auto;
+    max-width: 800px;
+    /* No alignment or flex applied */
+    padding: 20px 0;
 }
