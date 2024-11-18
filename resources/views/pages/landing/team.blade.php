@@ -1,6 +1,6 @@
 <section id="team" class="team-section">
     <div class="container">
-        <h2>Rencontrez Notre Équipe</h2>
+        <h2>⚡ Découvrez l'équipe</h2>
         <p class="centered-text">
             <strong>TFA - The Forge Agency</strong>, spécialiste de la transformation digitale et des solutions
             complexes, réalise les sites de Site Éclair avec passion et expertise.

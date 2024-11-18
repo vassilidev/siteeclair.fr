@@ -1,5 +1,5 @@
 <section id="features" class="features-section">
-    <h2>Pourquoi Choisir Site Éclair ?</h2>
+    <h2>⚡ Pourquoi Choisir Site Éclair ?</h2>
     <div class="container features-grid">
         <div class="feature-item">
             <i class="fas fa-tachometer-alt fa-xl"></i>

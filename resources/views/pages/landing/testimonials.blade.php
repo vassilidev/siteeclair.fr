@@ -1,6 +1,6 @@
 <section id="testimonials" class="testimonials-wall">
     <div class="testimonials-header">
-        <h2>Ils nous font confiance</h2>
+        <h2>⚡ Ils nous font confiance</h2>
         <div class="badges">
             <span class="badge supermalter">
                 <i class="fas fa-award"></i> Super Malter 2

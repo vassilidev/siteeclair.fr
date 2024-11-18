@@ -1,6 +1,6 @@
 <section id="method" class="method-section">
     <div class="container">
-        <h2>Notre Méthode de Travail</h2>
+        <h2>⚡ Notre Méthode de Travail</h2>
         <p class="centered-text">Votre site livré en 1 semaine chrono, prêt à être utilisé et modifié en toute
             autonomie.</p><br>
         <div class="method-grid">

@@ -1,5 +1,5 @@
 <section id="about" class="about-section">
-    <h2>Qu'est-ce que Site Éclair ?</h2>
+    <h2>⚡ Qu'est-ce que Site Éclair ?</h2>
     <div class="about-content">
         <p>
             <strong>Site Éclair</strong> est une solution clé en main pour les entrepreneurs, TPE et PME qui souhaitent

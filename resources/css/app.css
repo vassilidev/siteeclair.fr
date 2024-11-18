@@ -740,11 +740,11 @@ section h2 {
     content: '\f077';
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background-color: var(--footer-background);
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0; /* Reduced padding for compact layout */
 }
 
 .footer-content {
@@ -755,56 +755,58 @@ footer {
 
 .footer-top {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    justify-content: space-between;
+    gap: 20px; /* Adjust spacing between columns */
+    margin-bottom: 20px; /* Reduced for smaller spacing */
 }
 
 .footer-col {
-    flex: 1 1 200px;
-    margin: 10px;
+    flex: 1 1 250px; /* Ensures columns resize gracefully */
 }
 
-.footer-col > h3, h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.footer-col ul li {
+.footer-col h3, .footer-col h4 {
+    font-size: 1.1rem;
     margin-bottom: 10px;
+    color: #fff;
 }
 
-.footer-col ul li a {
+.footer-col p, .footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-nav-links li, .footer-legal-links li {
+    margin-bottom: 8px;
+}
+
+.footer-nav-links li a, .footer-legal-links li a {
     color: #fff;
-    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.footer-col ul li a:hover {
+.footer-nav-links li a:hover, .footer-legal-links li a:hover {
     color: var(--accent-color);
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
     border-top: 1px solid #444;
 }
 
 .footer-bottom p {
     margin: 0;
-    color: #fff;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    color: #ccc;
 }
 
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     margin-top: 10px;
 }
 
@@ -816,6 +818,24 @@ footer {
 
 .social-icons a:hover {
     color: var(--accent-color);
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Reduced gap for mobile */
+    }
+
+    .footer-col {
+        flex: 1 1 auto;
+        margin-bottom: 15px; /* Reduced spacing */
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem; /* Slightly smaller font size */
+    }
 }
 
 /* Responsive */
@@ -1108,7 +1128,13 @@ section:nth-child(even) {
 
 .contact-content {
     margin: 0 auto;
-    max-width: 800px;
-    /* No alignment or flex applied */
-    padding: 20px 0;
+    max-width: 800px; /* Limiter la largeur */
+    padding: 20px 10px; /* Réduire le padding horizontal sur mobile */
+    box-sizing: border-box; /* Inclure padding dans la largeur totale */
+}
+
+.lemcal-embed-booking-calendar {
+    width: 100%; /* Forcer l'adaptation à l'écran */
+    max-width: 500px; /* Facultatif : ajustez selon vos besoins */
+    margin: 0 auto; /* Centrer l'élément */
 }
