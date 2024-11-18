@@ -9,8 +9,6 @@
 
     @include('pages.landing.features')
 
-    @include('pages.landing.portfolio')
-
     @include('pages.landing.pricing')
 
     @include('pages.landing.team')

@@ -128,7 +128,16 @@ particlesJS("particles-js", {
 
 const cursor = document.getElementById('cursor');
 
+// Vérifie si l'écran est mobile
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
 document.addEventListener('mousemove', (event) => {
+    if (isMobile()) {
+        cursor.style.display = 'none'; // Assure que la pastille est cachée
+        return; // Sort de la fonction sur mobile
+    }
+
+    cursor.style.display = 'block'; // Affiche la pastille sur desktop
     const {clientX, clientY} = event;
     cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
 });
