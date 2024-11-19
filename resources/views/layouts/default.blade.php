@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {!! SEO::generate() !!}
 
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
-          media="print" onload="this.media='all'">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-          defer crossorigin="anonymous"/>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8d4e15b026.js" crossorigin="anonymous"></script>
 
     <script src="{{ asset('particles.min.js') }}" defer></script>
+
+    <!-- Styles -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- Favicon et Icônes Apple -->
     <link rel="icon" type="image/png" href="{{ asset('favicon-96x96.png') }}" sizes="96x96"/>
     <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}"/>
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
@@ -27,18 +26,25 @@
     <meta name="apple-mobile-web-app-title" content="Site éclair"/>
     <link rel="manifest" href="{{ asset('site.webmanifest') }}"/>
 </head>
-<body>
+<body class="font-poppins text-text bg-background overflow-x-hidden">
+
+<!-- Curseur personnalisé -->
 <div id="cursor"></div>
 
+<!-- Navbar -->
 @include('layouts.default.navbar')
 
-<main>
+<!-- Contenu principal -->
+<main class="pt-16">
     @yield('content')
 </main>
 
+<!-- Footer -->
 @include('layouts.default.footer')
 
+<!-- Scripts -->
 @production
+    <!-- Script Tawk.to Live Chat -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {

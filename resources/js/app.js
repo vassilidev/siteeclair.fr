@@ -1,18 +1,22 @@
 import './bootstrap';
 
-let faqItems = document.querySelectorAll('.faq-item');
+const faqQuestions = document.querySelectorAll('.faq-question');
 
-faqItems.forEach(item => {
-    item.querySelector('.faq-question').addEventListener('click', () => {
-        item.classList.toggle('active');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.classList.toggle('hidden');
+        const icon = question.querySelector('i');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
     });
 });
 
-const menuToggle = document.getElementById('mobile-menu');
-const navbarLinks = document.querySelector('.navbar-links');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
 
-menuToggle.addEventListener('click', () => {
-    navbarLinks.classList.toggle('active');
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
 });
 
 particlesJS("particles-js", {
@@ -128,16 +132,7 @@ particlesJS("particles-js", {
 
 const cursor = document.getElementById('cursor');
 
-// Vérifie si l'écran est mobile
-const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
-
-document.addEventListener('mousemove', (event) => {
-    if (isMobile()) {
-        cursor.style.display = 'none'; // Assure que la pastille est cachée
-        return; // Sort de la fonction sur mobile
-    }
-
-    cursor.style.display = 'block'; // Affiche la pastille sur desktop
-    const {clientX, clientY} = event;
-    cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
 });
