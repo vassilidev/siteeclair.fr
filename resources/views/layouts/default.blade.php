@@ -52,7 +52,6 @@
 @endproduction
 
 <script defer src="https://kit.fontawesome.com/8d4e15b026.js" crossorigin="anonymous"></script>
-<script defer src="{{ asset('js/particles.min.js') }}"></script>
 <script defer src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
