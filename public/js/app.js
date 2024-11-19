@@ -1,5 +1,3 @@
-import './bootstrap';
-
 const faqQuestions = document.querySelectorAll('.faq-question');
 
 faqQuestions.forEach(question => {
