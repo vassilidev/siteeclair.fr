@@ -1,7 +1,7 @@
 <nav class="fixed w-full bg-section-background shadow-md z-50">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" class="flex items-center text-text font-bold text-xl">
-            <img src="{{ asset('img/logo.svg') }}" alt="Logo Site Éclair" class="h-10 mr-2">
+            <img src="{{ asset('img/logo.svg') }}" width="40" height="30" alt="Logo Site Éclair" class="h-10 mr-2">
             <span>Site Éclair</span>
         </a>
         <div class="md:hidden">
