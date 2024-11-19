@@ -1,4 +1,3 @@
-// tailwind.config.js
 export default {
     content: [
         './resources/**/*.blade.php',
@@ -8,12 +7,12 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#FFB86C',
-                accent: '#ce9456',
-                text: '#333333',
-                background: '#F9F9F9',
-                'section-background': '#FFFFFF',
-                'footer-background': '#1A1A1A',
+                primary: '#FF8C42', // Plus foncé pour un meilleur contraste
+                accent: '#B5651D', // Accent plus marqué
+                text: '#222222', // Texte plus sombre
+                background: '#FFFFFF', // Fond blanc
+                'section-background': '#F4F4F4', // Gris clair pour un contraste doux
+                'footer-background': '#0D0D0D', // Noir pour le footer
             },
             fontFamily: {
                 poppins: ['Poppins', 'sans-serif'],

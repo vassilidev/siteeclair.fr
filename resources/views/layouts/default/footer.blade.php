@@ -24,14 +24,13 @@
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
                 <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/votrepage" class="hover:text-accent"><i
-                                class="fab fa-facebook-f fa-lg"></i></a>
-                    <a href="https://www.twitter.com/votrepage" class="hover:text-accent"><i
-                                class="fab fa-twitter fa-lg"></i></a>
-                    <a href="https://www.linkedin.com/company/votrepage" class="hover:text-accent"><i
-                                class="fab fa-linkedin-in fa-lg"></i></a>
-                    <a href="https://www.instagram.com/votrepage" class="hover:text-accent"><i
-                                class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/company/votrepage" class="hover:text-accent"
+                       aria-label="Linkedin">
+                        <i class="fab fa-linkedin-in fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/votrepage" class="hover:text-accent" aria-label="Instagram">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
                 </div>
             </div>
             <!-- Colonne 4 -->

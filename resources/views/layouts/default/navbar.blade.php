@@ -5,7 +5,7 @@
             <span>Site Éclair</span>
         </a>
         <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-text focus:outline-none">
+            <button id="mobile-menu-button" class="text-text focus:outline-none" aria-label="Menu">
                 <i class="fas fa-bars fa-2x"></i>
             </button>
         </div>
@@ -15,7 +15,8 @@
             <a href="#features" class="text-text hover:text-primary">Services</a>
             <a href="#testimonials" class="text-text hover:text-primary">Témoignages</a>
             <a href="#faq" class="text-text hover:text-primary">FAQ</a>
-            <a href="#pricing" class="bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded transition duration-300">Offres</a>
+            <a href="#pricing"
+               class="bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded transition duration-300">Offres</a>
         </div>
     </div>
     <!-- Menu mobile -->
