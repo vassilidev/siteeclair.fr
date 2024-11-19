@@ -4,7 +4,7 @@
         <div class="flex flex-wrap justify-between mb-6">
             <!-- Colonne 1 -->
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                <img src="{{ asset('logo.svg') }}" width="32" alt="Logo Site Éclair" class="mb-2">
+                <img src="{{ asset('img/logo.svg') }}" width="32" alt="Logo Site Éclair" class="mb-2">
                 <h3 class="text-xl font-semibold">Site Éclair</h3>
                 <p>&copy; {{ date('Y') }} Tous droits réservés.</p>
             </div>

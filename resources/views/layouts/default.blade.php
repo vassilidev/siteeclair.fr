@@ -12,12 +12,12 @@
 
     @vite('resources/css/app.css')
 
-    <link rel="icon" type="image/png" href="{{ asset('favicon-96x96.png') }}" sizes="96x96"/>
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}"/>
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-touch-icon.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon-96x96.png') }}" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') }}"/>
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon.png') }}"/>
     <meta name="apple-mobile-web-app-title" content="Site éclair"/>
-    <link rel="manifest" href="{{ asset('site.webmanifest') }}"/>
+    <link rel="manifest" href="{{ asset('img/site.webmanifest') }}"/>
 
     {!! SEO::generate() !!}
 </head>
@@ -48,7 +48,7 @@
 @endproduction
 
 <script defer src="https://kit.fontawesome.com/8d4e15b026.js" crossorigin="anonymous"></script>
-<script defer src="{{ asset('particles.min.js') }}"></script>
-@vite('resources/js/app.js')
+<script defer src="{{ asset('js/particles.min.js') }}"></script>
+<script defer src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
