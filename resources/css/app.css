@@ -10,6 +10,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.banner-section {
+    background-color: #000;
+    background-image: url('../../public/img/banner.webp');
+}
+
+@media (max-width: 600px) {
+    .banner-section {
+        background-image: url('../../public/img/banner.webp');
+    }
+}
+
 /* Curseur personnalisé */
 #cursor {
     position: fixed;
