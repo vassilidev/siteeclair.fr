@@ -4,10 +4,11 @@
         <p class="text-center mb-8 text-lg text-accent">
             Planifiez une réunion avec nous en quelques clics grâce à notre outil de prise de rendez-vous ! 💬
         </p>
-        <div class="max-w-md mx-auto">
-            <!-- Intégration de Lemcal Booking -->
-            <div class="lemcal-embed-booking-calendar" data-user="usr_gtmT9jzLf9KsrRwob" data-meeting-type="met_Eq6T9AW49diGYm9rR"></div>
-            <script src="https://cdn.lemcal.com/lemcal-integrations.min.js" defer></script>
+        <div class="max-w-md mx-auto text-center">
+            <a href="{{ route('contact') }}"
+               class="bg-primary text-white py-3 px-6 rounded-lg transition duration-300 hover:bg-accent">
+                Planifiez un rendez-vous
+            </a>
         </div>
     </div>
 </section>
