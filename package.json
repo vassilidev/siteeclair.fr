@@ -13,6 +13,8 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
-    "alpinejs": "^3.8.1"
+    "alpinejs": "^3.8.1",
+    "cssnano": "^7.0.6",
+    "postcss-nested": "^7.0.2"
   }
 }
