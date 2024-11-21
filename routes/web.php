@@ -3,6 +3,7 @@
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PreorderController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\Sitemap;
 
 Route::get('/', LandingController::class)->name('landing');
 
@@ -13,5 +14,18 @@ Route::get('/order/success/{order}', [PreorderController::class, 'success'])->na
 Route::view('/contact', 'pages.contact')->name('contact');
 
 Route::get('/sitemap.xml', function () {
-    return \Spatie\Sitemap\SitemapGenerator::create(config('app.url'))->getSitemap();
+    $sitemap = Sitemap::create()
+        ->add(route('landing'));
+
+    foreach (\App\Enums\Offer::cases() as $offer) {
+        if ($offer->isCustom()) {
+            continue;
+        }
+
+        $sitemap->add(route('preorder', $offer));
+    }
+
+    $sitemap->add(route('contact'));
+
+    return $sitemap;
 })->name('sitemap');
