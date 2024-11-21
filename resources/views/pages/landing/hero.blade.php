@@ -1,5 +1,5 @@
 <section class="relative min-h-screen-with-navbar flex items-center justify-center text-white">
-    <img src="{{ asset('img/banner.webp') }}" alt="Bannière de fond" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+    <img src="{{ asset('img/banner.webp') }}" alt="Bannière de fond" class="absolute inset-0 w-full h-full object-cover">
     <div class="absolute inset-0 bg-black opacity-80"></div>
     <div class="relative z-10 text-center px-4">
         <h1 class="text-3xl md:text-4xl font-bold mb-6">
