@@ -3,10 +3,19 @@ const faqQuestions = document.querySelectorAll('.faq-question');
 faqQuestions.forEach(question => {
     question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
-        answer.classList.toggle('hidden');
         const icon = question.querySelector('i');
+
+        // Toggle hidden class for answer
+        answer.classList.toggle('hidden');
         icon.classList.toggle('fa-chevron-down');
         icon.classList.toggle('fa-chevron-up');
+
+        // Smooth slide toggle
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
     });
 });
 

@@ -1,14 +1,20 @@
 <section id="contact-section" class="py-20 bg-background border-t-4 border-primary">
-    <div class="container mx-auto px-4">
-        <h2 class="text-center text-2xl md:text-3xl font-bold text-primary mb-4">Encore des questions ? 🤔</h2>
-        <p class="text-center mb-8 text-lg text-accent">
-            Planifiez une réunion avec nous en quelques clics grâce à notre outil de prise de rendez-vous ! 💬
-        </p>
-        <div class="max-w-md mx-auto text-center">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
+            <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">Encore des questions ? 🤔</h2>
+            <p class="text-lg text-accent mb-4">
+                Planifiez une réunion avec nous en quelques clics grâce à notre outil de prise de rendez-vous ! 💬
+            </p>
             <a href="{{ route('contact') }}"
-               class="bg-primary text-white py-3 px-6 rounded-lg transition duration-300 hover:bg-accent">
+               class="bg-primary text-white py-3 px-6 rounded-lg transition duration-300 hover:bg-accent inline-block">
                 Planifiez un rendez-vous
             </a>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-full max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white">
+                <img src="{{ asset('img/meet.webp') }}" alt="Meeting" class="w-full h-auto" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 opacity-70 pointer-events-none"></div>
+            </div>
         </div>
     </div>
 </section>
