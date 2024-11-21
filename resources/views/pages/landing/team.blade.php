@@ -18,7 +18,7 @@
                             loading="lazy"
                             class="w-32 h-32 mx-auto rounded-full mb-4 object-cover border-4 border-primary-dark"
                     >
-                    <h3 class="text-xl font-semibold mb-2 text-primary-dark">{{ $member->name() }}</h3>
+                    <h3 class="text-xl font-semibold mb-2 text-dark">{{ $member->name() }}</h3>
                     <p class="text-gray-700">{{ $member->description() }}</p>
                 </div>
             @endforeach

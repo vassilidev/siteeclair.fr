@@ -17,7 +17,7 @@
                         </div>
                         <!-- Texte étape -->
                         <div class="ml-4">
-                            <h3 class="text-xl font-semibold text-primary-dark group-hover:text-accent-dark transition-colors duration-300">
+                            <h3 class="text-xl font-semibold text-dark group-hover:text-accent-dark transition-colors duration-300">
                                 {{ $step->title() }}
                             </h3>
                             <p class="text-gray-800">
