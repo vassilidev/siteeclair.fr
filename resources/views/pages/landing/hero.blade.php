@@ -1,5 +1,4 @@
-<section class="relative min-h-screen-with-navbar flex items-center justify-center text-white"
-         style="background-color: #000; background-image: url('{{ asset('img/banner.webp') }}');">
+<section class="relative min-h-screen-with-navbar flex items-center justify-center text-white">
     <div class="absolute inset-0 bg-black opacity-80"></div>
     <div class="relative z-10 text-center px-4">
         <h1 class="font-bold mb-6">
