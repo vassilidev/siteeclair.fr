@@ -2,8 +2,8 @@
     <h2 class="text-center text-2xl md:text-3xl font-bold text-primary-dark mb-4">⚡ Qu'est-ce que Site Éclair ?</h2>
     <div class="max-w-2xl mx-auto text-center text-lg leading-relaxed px-4">
         <p>
-            <strong>Site Éclair</strong> est une solution clé en main pour les entrepreneurs, TPE et PME qui souhaitent
-            un site web rapide, performant et évolutif, livré en 5 jours.
+            <strong>Site Éclair</strong> est une solution la solution idéale pour les entrepreneurs, TPE et PME qui souhaitent
+            un site web rapide, performant et évolutif, livré en seulement 5 jours.
         </p>
         <br>
         <p>

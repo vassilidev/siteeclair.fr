@@ -55,8 +55,3 @@ html {
     background-color: #FFB86C;
     color: #ffffff;
 }
-
-/* Classe pour la hauteur de la section Hero */
-.min-h-screen-with-navbar {
-    min-height: calc(100vh - 4rem); /* Ajustez 4rem à la hauteur réelle de votre navbar */
-}

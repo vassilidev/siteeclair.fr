@@ -1,55 +1,37 @@
 <?php
-/**
- * @see https://github.com/artesaos/seotools
- */
 
 return [
-    'meta' => [
-        /*
-         * The default configurations to be used by the meta generator.
-         */
+    'meta'      => [
         'defaults' => [
-            'title'        => "Site Éclair - Votre site web rapide et performant", // Titre par défaut
-            'titleBefore'  => false, // Mettre defaults.title avant le titre de la page, ex: "Titre - Dashboard"
-            'description'  => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description par défaut
-            'separator'    => ' - ', // Séparateur entre les titres
-            'keywords'     => ['création site web', 'sites rapides', 'sites performants', 'développement web', 'site sur mesure', 'solution digitale', 'SEO', 'sécurité web'],
-            'canonical'    => null, // Utilise automatiquement l'URL actuelle si défini sur 'current' ou 'full'
-            'robots'       => 'all', // Configure l'indexation des moteurs de recherche
+            'title'       => "Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus",
+            'titleBefore' => false,
+            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
+            'separator'   => ' - ',
+            'keywords'    => ['création site web rapide', 'site web performant', 'site personnalisé', 'hébergement et nom de domaine inclus', 'site TPE PME', 'création site web 5 jours', 'solution clé en main', 'SEO pour petites entreprises', 'ajustements illimités'],
+            'canonical'   => null,
+            'robots'      => 'all',
         ],
     ],
     'opengraph' => [
-        /*
-         * The default configurations to be used by the opengraph generator.
-         */
         'defaults' => [
-            'title'       => 'Site Éclair - Votre site web rapide et performant', // Titre OpenGraph
-            'description' => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description OpenGraph
-            'url'         => null, // Utilise automatiquement l'URL actuelle
-            'type'        => 'website', // Type de contenu : "website" pour un site web
-            'site_name'   => 'Site Éclair', // Nom du site
-            'images'      => [], // Aucune image par défaut
+            'title'       => 'Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus',
+            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
+            'url'         => null,
+            'type'        => 'website',
+            'site_name'   => 'Site Éclair',
+            'images'      => [],
         ],
     ],
-    'twitter' => [
-        /*
-         * The default values to be used by the twitter cards generator.
-         */
-        'defaults' => [
-            'card'        => 'summary_large_image', // Type de carte Twitter
-            'site'        => '@siteeclair', // Compte Twitter (remplacez par votre handle)
-        ],
+    'twitter'   => [
+        'defaults' => [],
     ],
-    'json-ld' => [
-        /*
-         * The default configurations to be used by the json-ld generator.
-         */
+    'json-ld'   => [
         'defaults' => [
-            'title'       => 'Site Éclair - Votre site web rapide et performant', // Titre JSON-LD
-            'description' => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description JSON-LD
-            'url'         => null, // Utilise automatiquement l'URL actuelle
-            'type'        => 'WebPage', // Type de page pour JSON-LD
-            'images'      => [], // Image par défaut
+            'title'       => 'Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus',
+            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
+            'url'         => null,
+            'type'        => 'WebPage',
+            'images'      => [],
         ],
     ],
 ];
