@@ -25,6 +25,7 @@
     <link rel="manifest" href="{{ asset('img/site.webmanifest') }}"/>
 
     {!! SEO::generate() !!}
+    {!! JsonLd::generate(); !!}
 </head>
 <body class="font-poppins text-text bg-background overflow-x-hidden">
 

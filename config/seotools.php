@@ -11,7 +11,7 @@ return [
         'defaults' => [
             'title'        => "Site Éclair - Votre site web rapide et performant", // Titre par défaut
             'titleBefore'  => false, // Mettre defaults.title avant le titre de la page, ex: "Titre - Dashboard"
-            'description'  => "Des solutions web rapides, performantes et abordables, adaptées à vos besoins.", // Description par défaut
+            'description'  => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description par défaut
             'separator'    => ' - ', // Séparateur entre les titres
             'keywords'     => ['création site web', 'sites rapides', 'sites performants', 'développement web', 'site sur mesure', 'solution digitale', 'SEO', 'sécurité web'],
             'canonical'    => null, // Utilise automatiquement l'URL actuelle si défini sur 'current' ou 'full'
@@ -23,8 +23,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'Site Éclair - Des solutions web rapides et performantes', // Titre OpenGraph
-            'description' => "Spécialistes des sites rapides, évolutifs et sécurisés.", // Description OpenGraph
+            'title'       => 'Site Éclair - Votre site web rapide et performant', // Titre OpenGraph
+            'description' => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description OpenGraph
             'url'         => null, // Utilise automatiquement l'URL actuelle
             'type'        => 'website', // Type de contenu : "website" pour un site web
             'site_name'   => 'Site Éclair', // Nom du site
@@ -45,7 +45,7 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'Site Éclair - Sites Web sur Mesure', // Titre JSON-LD
+            'title'       => 'Site Éclair - Votre site web rapide et performant', // Titre JSON-LD
             'description' => "Des sites web performants, évolutifs et abordables, adaptés à vos besoins.", // Description JSON-LD
             'url'         => null, // Utilise automatiquement l'URL actuelle
             'type'        => 'WebPage', // Type de page pour JSON-LD
