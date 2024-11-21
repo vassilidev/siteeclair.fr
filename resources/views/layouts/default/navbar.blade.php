@@ -10,21 +10,21 @@
             </button>
         </div>
         <div id="navbar-links" class="hidden md:flex space-x-6 items-center">
-            <a href="{{ route('landing') }}#about" class="text-gray-800 hover:text-primary-dark">À propos</a>
-            <a href="{{ route('landing') }}#method" class="text-gray-800 hover:text-primary-dark">Méthode</a>
-            <a href="{{ route('landing') }}#features" class="text-gray-800 hover:text-primary-dark">Services</a>
-            <a href="{{ route('landing') }}#testimonials" class="text-gray-800 hover:text-primary-dark">Témoignages</a>
+            <a href="{{ route('landing') }}#about" class="text-gray-800 hover:text-primary-dark">Accueil</a>
+            <a href="{{ route('landing') }}#method" class="text-gray-800 hover:text-primary-dark">Processus</a>
+            <a href="{{ route('landing') }}#features" class="text-gray-800 hover:text-primary-dark">Pourquoi Nous</a>
+            <a href="{{ route('landing') }}#team" class="text-gray-800 hover:text-primary-dark">Équipe</a>
             <a href="{{ route('landing') }}#faq" class="text-gray-800 hover:text-primary-dark">FAQ</a>
             <a href="{{ route('landing') }}#pricing"
                class="bg-primary-dark hover:bg-accent-dark text-white font-bold py-2 px-4 rounded transition duration-300">Offres</a>
         </div>
     </div>
     <div id="mobile-menu" class="md:hidden hidden bg-section-background">
-        <a href="{{ route('landing') }}#about" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">À propos</a>
-        <a href="{{ route('landing') }}#method" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Méthode</a>
-        <a href="{{ route('landing') }}#features" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Services</a>
-        <a href="{{ route('landing') }}#testimonials"
-           class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Témoignages</a>
+        <a href="{{ route('landing') }}#about" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Accueil</a>
+        <a href="{{ route('landing') }}#method" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Processus</a>
+        <a href="{{ route('landing') }}#features" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Pourquoi
+            Nous</a>
+        <a href="{{ route('landing') }}#team" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Équipe</a>
         <a href="{{ route('landing') }}#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">FAQ</a>
         <a href="{{ route('landing') }}#pricing"
            class="block py-2 px-4 text-white bg-primary-dark hover:bg-accent-dark font-bold">Offres</a>

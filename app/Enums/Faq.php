@@ -9,38 +9,44 @@ enum Faq: string
     case HOSTING_DOMAIN = 'hosting_domain';
     case SUPPORT = 'support';
     case SEO = 'seo';
-    case EVOLUTION = 'evolution';
-    case DEV_TOOLS = 'dev_tools';
-    case NO_WORDPRESS = 'no_wordpress';
-    case DIGITIZATION = 'digitization';
+    case SCALABILITY = 'scalability';
+    case TECH_STACK = 'tech_stack';
+    case WORDPRESS = 'wordpress';
+    case DIGITAL_TRANSFORMATION = 'digital_transformation';
+    case PAYMENT_METHODS = 'payment_methods';
+    case OWNERSHIP = 'ownership';
 
     public function getQuestion(): string
     {
         return match ($this) {
-            self::DELIVERY_TIME => 'Quels sont les délais de livraison pour votre service ?',
-            self::SITE_EDIT => 'Puis-je modifier mon site après sa mise en ligne ?',
-            self::HOSTING_DOMAIN => 'Le site inclut-il un hébergement et un nom de domaine ?',
-            self::SUPPORT => 'Proposez-vous un support après la livraison ?',
-            self::SEO => 'Mon site sera-t-il optimisé pour le référencement ?',
-            self::EVOLUTION => 'Votre solution est-elle évolutive ?',
-            self::DEV_TOOLS => 'Quels outils utilisez-vous pour le développement des sites ?',
-            self::NO_WORDPRESS => 'Pourquoi ne pas utiliser WordPress pour vos sites ?',
-            self::DIGITIZATION => 'Avez-vous des solutions pour la digitalisation d\'entreprise ?',
+            self::DELIVERY_TIME => '⏱️ Quel est le délai de livraison pour mon site web ?',
+            self::SITE_EDIT => '🖋️ Pourrai-je modifier mon site après sa mise en ligne ?',
+            self::HOSTING_DOMAIN => '🌐 Le nom de domaine et l’hébergement sont-ils inclus ?',
+            self::SUPPORT => '🎯 Offrez-vous un support après la livraison ?',
+            self::SEO => '🔎 Mon site sera-t-il optimisé pour les moteurs de recherche ?',
+            self::SCALABILITY => '🚀 Mon site pourra-t-il évoluer avec mon entreprise ?',
+            self::TECH_STACK => '💻 Quelles technologies utilisez-vous pour développer les sites ?',
+            self::WORDPRESS => '❓ Pourquoi ne pas utiliser WordPress pour vos sites ?',
+            self::DIGITAL_TRANSFORMATION => '📈 Proposez-vous des solutions pour la transformation digitale ?',
+            self::PAYMENT_METHODS => '💳 Quels modes de paiement acceptez-vous ?',
+            self::OWNERSHIP => '🔐 Serai-je propriétaire de mon site web une fois livré ?',
         };
     }
 
     public function getAnswer(): string
     {
         return match ($this) {
-            self::DELIVERY_TIME => 'Avec la Formule Éclair, votre site est livré en seulement 5 jours ouvrés. Pour des besoins plus spécifiques, nos solutions sur-mesure sont prêtes en 10 jours ouvrés.',
-            self::SITE_EDIT => 'Oui, grâce à une interface intuitive, vous pouvez modifier les textes et images facilement. Pour des changements techniques ou structurels, notre équipe est disponible pour vous accompagner.',
-            self::HOSTING_DOMAIN => 'Oui, nous incluons un nom de domaine dans nos offres. Vous avez également la possibilité de transférer un domaine existant lors du processus de paiement.',
-            self::SUPPORT => 'Oui, notre support est disponible 24/7. Vous bénéficiez également d’ajustements illimités via le back-office ou notre service premium.',
-            self::SEO => 'Oui, tous nos sites sont conçus avec des bases solides pour le SEO. Ils atteignent d\'excellents scores sur Google PageSpeed Insights et sont prêts pour des campagnes SEA.',
-            self::EVOLUTION => 'Tout à fait, nos sites sont conçus pour évoluer avec votre entreprise. Vous pouvez ajouter des fonctionnalités, intégrer des outils ou des APIs pour répondre à vos besoins futurs.',
-            self::DEV_TOOLS => 'Nous développons nos applications avec des frameworks puissants, robustes et maintenus par une communauté active. Cela garantit performance, évolutivité et sécurité à long terme.',
-            self::NO_WORDPRESS => 'Bien que WordPress soit une solution populaire, nous privilégions des technologies modernes qui garantissent une meilleure sécurité, des performances supérieures, et une personnalisation avancée.',
-            self::DIGITIZATION => 'Oui, nous proposons des services pour accompagner votre transformation digitale, incluant l\'intégration d\'outils qui optimisent vos process et maximisent votre productivité.',
+            self::DELIVERY_TIME => 'Pour la Formule Éclair, votre site est prêt en seulement 5 jours ouvrés. Pour des projets plus complexes ou sur mesure, les délais sont établis en fonction de vos besoins spécifiques.',
+            self::SITE_EDIT => 'Absolument ! Vous aurez accès à une interface intuitive vous permettant de modifier textes et images en toute autonomie. Pour des modifications plus avancées, notre équipe reste à votre disposition.',
+            self::HOSTING_DOMAIN => 'Oui, le nom de domaine et l’hébergement sont inclus dans toutes nos offres pendant un an. Vous n’avez rien à gérer de votre côté, nous nous occupons de tout.',
+            self::SUPPORT => 'Nous offrons un support client 24/7. De plus, vous bénéficiez de modifications illimitées pour que votre site reste toujours à jour et en phase avec vos besoins.',
+            self::SEO => 'Chaque site est conçu avec les meilleures pratiques SEO. Nous optimisons les performances pour un chargement rapide et une meilleure visibilité sur les moteurs de recherche.',
+            self::SCALABILITY => 'Oui, nos sites sont développés pour être évolutifs. Vous pourrez ajouter de nouvelles fonctionnalités ou pages au fur et à mesure que votre entreprise grandit.',
+            self::TECH_STACK => 'Nous utilisons des technologies modernes comme Laravel, Vue.js et Tailwind CSS, garantissant performance, sécurité et pérennité de votre site.',
+            self::WORDPRESS => 'Nous privilégions des technologies plus modernes et sécurisées que WordPress. Cela nous permet de vous offrir des sites plus rapides, sur mesure, et sans les vulnérabilités souvent associées à WordPress.',
+            self::DIGITAL_TRANSFORMATION => 'Oui, nous accompagnons les entreprises dans leur transformation digitale, en proposant des solutions sur mesure pour optimiser vos processus et booster votre productivité.',
+            self::PAYMENT_METHODS => 'Nous acceptons les paiements par carte bancaire, virement bancaire et PayPal. Des facilités de paiement peuvent également être discutées selon vos besoins.',
+            self::OWNERSHIP => 'Oui, une fois le site livré, vous en êtes pleinement propriétaire. Vous aurez accès à l’ensemble du code source et pourrez en disposer librement.',
         };
     }
 }

@@ -20,9 +20,9 @@ enum Offer: string
     public function description(): string
     {
         return match ($this) {
-            self::FORMULE_ECLAIR => 'Idéale pour une présence en ligne rapide et efficace.',
-            self::FORMULE_FOUDRE => 'Pour une présence en ligne complète et puissante.',
-            self::FORMULE_TEMPETE => 'Solution sur mesure pour des projets ambitieux et évolutifs.',
+            self::FORMULE_ECLAIR => 'Idéale pour une mise en ligne rapide et efficace.',
+            self::FORMULE_FOUDRE => 'Pour une présence en ligne complète et robuste.',
+            self::FORMULE_TEMPETE => 'Solution sur mesure pour des projets ambitieux et complexes.',
         };
     }
 
@@ -30,7 +30,7 @@ enum Offer: string
     {
         return match ($this) {
             self::FORMULE_ECLAIR => '490 € HT',
-            self::FORMULE_FOUDRE => '680 € HT',
+            self::FORMULE_FOUDRE => '790 € HT',
             self::FORMULE_TEMPETE => 'Sur Devis',
         };
     }
@@ -39,36 +39,38 @@ enum Offer: string
     {
         return match ($this) {
             self::FORMULE_ECLAIR => [
-                'Site One-Page (style landing, small business)',
-                'Design Personnalisé via Template',
-                'Formulaire de Contact',
-                'SEO de Base',
-                'Maintenance Annuelle Incluse',
+                'Site One-Page Moderne et Responsive',
+                'Design Personnalisé',
+                'Formulaire de Contact Fonctionnel',
+                'Optimisation SEO de Base',
                 'Hébergement Inclus (1 an)',
-                'Transfert de Nom de Domaine (offert)',
+                'Nom de Domaine Offert (1 an)',
+                'Mises à Jour et Maintenance (1 an)',
             ],
             self::FORMULE_FOUDRE => [
                 'Tout ce qui est inclus dans la Formule Éclair',
-                'Site Multi-Pages',
-                'SEO Avancé avec Accompagnement',
-                'Gestion Multilingue (jusqu\'à 3 langues)',
-                'Support Premium 24/7',
-                'Sauvegarde Automatique Mensuelle',
+                'Site Multi-Pages Professionnel',
+                'Blog Intégré pour le Contenu',
+                'Optimisation SEO Avancée',
+                'Configuration Multilingue (jusqu\'à 3 langues)',
+                'Intégration Réseaux Sociaux',
+                'Support Prioritaire 24/7',
             ],
             self::FORMULE_TEMPETE => [
                 'Tout ce qui est inclus dans la Formule Foudre',
-                'Développement d\'Applications et Back Office Complet',
-                'Intégration d\'APIs Spécifiques et Modules Intelligents',
-                'Création d\'APIs Personnalisées',
+                'Développement sur Mesure',
+                'Fonctionnalités Avancées (e-commerce, CRM, etc.)',
+                'Intégration d\'APIs Tierces',
+                'Back Office Complet et Personnalisé',
+                'Formation Personnalisée à l\'Utilisation',
                 'Support et Maintenance Personnalisés',
-                'Assistance Transfert et Formation',
             ],
         };
     }
 
     public function isPopular(): bool
     {
-        return $this === self::FORMULE_ECLAIR;
+        return $this === self::FORMULE_FOUDRE;
     }
 
     public function isCustom(): bool

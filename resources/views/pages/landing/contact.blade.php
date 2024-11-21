@@ -2,14 +2,14 @@
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <!-- Texte de contact -->
         <div class="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
-            <h2 class="text-2xl md:text-3xl font-bold text-primary-dark mb-4">Encore des questions ? 🤔</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-primary-dark mb-4">Prêt à lancer votre projet ? 🚀</h2>
             <p class="text-lg text-gray-700 mb-4">
-                Planifiez une réunion avec nous en quelques clics grâce à notre outil de prise de rendez-vous ! 💬
+                Réservez un appel avec notre équipe et transformons ensemble vos idées en réalité ! 💬
             </p>
             <a href="{{ route('contact') }}"
                class="bg-primary-dark text-white py-3 px-6 rounded-lg transition duration-300 hover:bg-accent-dark inline-block focus:outline-none focus:ring-2 focus:ring-primary-dark"
-               aria-label="Planifiez un rendez-vous avec notre équipe">
-                Planifiez un rendez-vous
+               aria-label="Réservez un appel avec notre équipe">
+                Prenez rendez-vous dès maintenant
             </a>
         </div>
         <!-- Carte d'image -->

@@ -10,22 +10,21 @@
             </div>
             <!-- Colonne 2 -->
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                <h4 class="text-lg font-semibold mb-2">Liens Utiles</h4>
+                <h4 class="text-lg font-semibold mb-2">Navigation</h4>
                 <ul>
-                    <li><a href="{{ route('landing') }}#about" class="hover:text-accent">À propos</a></li>
-                    <li><a href="{{ route('landing') }}#method" class="hover:text-accent">Méthode</a></li>
-                    <li><a href="{{ route('landing') }}#features" class="hover:text-accent">Services</a></li>
-                    <li><a href="{{ route('landing') }}#testimonials" class="hover:text-accent">Témoignages</a></li>
-                    <li><a href="{{ route('landing') }}#faq" class="hover:text-accent">FAQ</a></li>
+                    <li><a href="{{ route('landing') }}#about" class="hover:text-accent">Accueil</a></li>
+                    <li><a href="{{ route('landing') }}#features" class="hover:text-accent">Pourquoi Nous</a></li>
+                    <li><a href="{{ route('landing') }}#method" class="hover:text-accent">Processus</a></li>
                     <li><a href="{{ route('landing') }}#pricing" class="hover:text-accent">Offres</a></li>
+                    <li><a href="{{ route('landing') }}#team" class="hover:text-accent">Équipe</a></li>
+                    <li><a href="{{ route('landing') }}#faq" class="hover:text-accent">FAQ</a></li>
                 </ul>
             </div>
             <!-- Colonne 3 -->
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
                 <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/company/votrepage" class="hover:text-accent"
-                       aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/company/theforgeagency" class="hover:text-accent" aria-label="LinkedIn">
                         @svg('fab-linkedin', 'h-6 w-6')
                     </a>
                     <a href="https://www.instagram.com/site_eclair/" class="hover:text-accent" aria-label="Instagram">
@@ -35,16 +34,18 @@
             </div>
             <!-- Colonne 4 -->
             <div class="w-full md:w-1/4">
-                <h4 class="text-lg font-semibold mb-2">Informations légales</h4>
+                <h4 class="text-lg font-semibold mb-2">Informations Légales</h4>
                 <ul>
-                    <li><a href="https://the-forge.agency" class="hover:text-accent">Site de l'agence</a></li>
-                    <li><a href="/legal" class="hover:text-accent">CGU/CGV</a></li>
+                    <li><a href="https://the-forge.agency" class="hover:text-accent">Site de l'Agence</a></li>
+                    <li><a href="/legal" class="hover:text-accent">Mentions Légales</a></li>
+                    <li><a href="/cgv" class="hover:text-accent">CGV</a></li>
                 </ul>
             </div>
         </div>
         <!-- Footer Bottom -->
         <div class="text-center">
-                Réalisé avec le par @svg('fas-heart', 'inline-block h-4 w-4 text-pink-500') par
+            <p>
+                Réalisé avec @svg('fas-heart', 'inline-block h-4 w-4 text-pink-500') par
                 <a href="https://the-forge.agency/" class="hover:text-accent">TFA - The Forge Agency</a>
             </p>
         </div>

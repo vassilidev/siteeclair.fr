@@ -1,37 +1,42 @@
 <?php
 
+// config/seotools.php
+
 return [
     'meta'      => [
         'defaults' => [
-            'title'       => "Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus",
+            'title'       => "Site Éclair | Votre Site Web Professionnel en 5 Jours",
             'titleBefore' => false,
-            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
+            'description' => "Créez un site web rapide, performant et personnalisé en seulement 5 jours avec Site Éclair. Hébergement, nom de domaine et support inclus. Solutions idéales pour TPE et PME.",
             'separator'   => ' - ',
-            'keywords'    => ['création site web rapide', 'site web performant', 'site personnalisé', 'hébergement et nom de domaine inclus', 'site TPE PME', 'création site web 5 jours', 'solution clé en main', 'SEO pour petites entreprises', 'ajustements illimités'],
-            'canonical'   => null,
-            'robots'      => 'all',
+            'keywords'    => ['création site web rapide', 'site web performant', 'site web professionnel', 'hébergement inclus', 'nom de domaine inclus', 'site pour TPE', 'site pour PME', 'création site web 5 jours', 'solution clé en main', 'SEO pour petites entreprises', 'support inclus'],
+            'canonical'   => null, // L'URL canonique sera automatiquement définie
+            'robots'      => 'index, follow',
         ],
     ],
     'opengraph' => [
         'defaults' => [
-            'title'       => 'Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus',
-            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
-            'url'         => null,
+            'title'       => 'Site Éclair | Votre Site Web Professionnel en 5 Jours',
+            'description' => "Créez un site web rapide, performant et personnalisé en seulement 5 jours avec Site Éclair. Hébergement, nom de domaine et support inclus. Solutions idéales pour TPE et PME.",
+            'url'         => null, // L'URL sera automatiquement définie
             'type'        => 'website',
             'site_name'   => 'Site Éclair',
-            'images'      => [],
+            'images'      => [asset('img/preview.png')],
         ],
     ],
     'twitter'   => [
-        'defaults' => [],
+        'defaults' => [
+//            'card' => 'summary_large_image',
+//            'site' => '@SiteEclair', // Remplacez par le nom d'utilisateur Twitter réel
+        ],
     ],
     'json-ld'   => [
         'defaults' => [
-            'title'       => 'Site Éclair | Créez un Site Web Performant en 5 Jours - Hébergement et Domaine Inclus',
-            'description' => "Obtenez un site web rapide, performant et personnalisé en 5 jours avec Site Éclair. Hébergement, nom de domaine et ajustements illimités inclus. Idéal pour TPE et PME.",
-            'url'         => null,
-            'type'        => 'WebPage',
-            'images'      => [],
+            'title'       => 'Site Éclair | Votre Site Web Professionnel en 5 Jours',
+            'description' => "Créez un site web rapide, performant et personnalisé en seulement 5 jours avec Site Éclair. Hébergement, nom de domaine et support inclus. Solutions idéales pour TPE et PME.",
+            'url'         => null, // L'URL sera automatiquement définie
+            'type'        => 'WebSite',
+            'images'      => [asset('img/preview.png')],
         ],
     ],
 ];

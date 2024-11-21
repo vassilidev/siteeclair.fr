@@ -4,42 +4,42 @@ namespace App\Enums;
 
 enum WorkMethod: string
 {
-    case PAYMENT = 'payment';
-    case VALIDATION = 'validation';
-    case DESIGN = 'design';
-    case DEPLOYMENT = 'deployment';
-    case FEEDBACK = 'feedback';
+    case INITIATE = 'initiate';
+    case CONSULT = 'consult';
+    case CREATE = 'create';
+    case LAUNCH = 'launch';
+    case SUPPORT = 'support';
 
     public function title(): string
     {
         return match ($this) {
-            self::PAYMENT => 'Paiement & Rendez-vous',
-            self::VALIDATION => 'Validation du Besoin & Objectifs',
-            self::DESIGN => 'Conception & Développement',
-            self::DEPLOYMENT => 'Mise en Ligne',
-            self::FEEDBACK => 'Retours Illimités',
+            self::INITIATE => '1. Lancez Votre Projet',
+            self::CONSULT => '2. Consultation Personnalisée',
+            self::CREATE => '3. Création & Développement',
+            self::LAUNCH => '4. Mise en Ligne Express',
+            self::SUPPORT => '5. Suivi & Optimisation',
         };
     }
 
     public function description(): string
     {
         return match ($this) {
-            self::PAYMENT => 'Effectuez votre paiement et choisissez immédiatement un créneau pour démarrer le projet.',
-            self::VALIDATION => 'Lors du rendez-vous, nous analysons vos besoins et validons ensemble les objectifs à atteindre.',
-            self::DESIGN => 'Nous concevons une maquette sur mesure, puis procédons au développement et à l’intégration une fois validée.',
-            self::DEPLOYMENT => 'Après validation finale, nous livrons votre site et prenons en charge la mise en ligne, y compris le domaine, l’hébergement, les accès au code, et une notice explicative.',
-            self::FEEDBACK => 'Effectuez vos retours via le back-office ou notre support premium 24/7, sans limite de temps.',
+            self::INITIATE => 'Confirmez votre commande et réservez un créneau pour démarrer votre projet sans attendre.',
+            self::CONSULT => 'Lors de notre entretien, nous définissons ensemble vos besoins et vos objectifs spécifiques.',
+            self::CREATE => 'Nous concevons un design unique et développons votre site après votre validation.',
+            self::LAUNCH => 'Nous mettons en ligne votre site avec domaine et hébergement inclus, prêt à impressionner vos clients.',
+            self::SUPPORT => 'Bénéficiez de modifications illimitées et d’un support dédié pour faire évoluer votre site en continu.',
         };
     }
 
     public function icon(): string
     {
         return match ($this) {
-            self::PAYMENT => 'fas-credit-card',
-            self::VALIDATION => 'fas-calendar-check',
-            self::DESIGN => 'fas-pencil-ruler',
-            self::DEPLOYMENT => 'fas-check',
-            self::FEEDBACK => 'fas-sync-alt',
+            self::INITIATE => 'fas-rocket',
+            self::CONSULT => 'fas-comments',
+            self::CREATE => 'fas-laptop-code',
+            self::LAUNCH => 'fas-cloud-upload-alt',
+            self::SUPPORT => 'fas-life-ring',
         };
     }
 }

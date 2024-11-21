@@ -20,9 +20,9 @@ enum Team: string
     public function description(): string
     {
         return match ($this) {
-            self::VASSILI => 'Expert en développement, il conçoit des sites performants et évolutifs.',
-            self::NOE => 'Spécialiste de la gestion de projets et de la relation client, il garantit un accompagnement fluide.',
-            self::TFA => 'L’agence derrière Site Éclair, alliant innovation et expertise pour des solutions digitales sur mesure.',
+            self::VASSILI => 'Développeur senior avec plus de 6 ans d’expérience, il réalise des sites web performants et innovants.',
+            self::NOE => 'Chargé de projet dédié, il assure une communication fluide et un suivi personnalisé de votre projet.',
+            self::TFA => 'L’agence créative derrière Site Éclair, combinant innovation et expertise pour des solutions digitales sur mesure.',
         };
     }
 

@@ -1,5 +1,7 @@
 <?php
 
+// app/Providers/AppServiceProvider.php
+
 namespace App\Providers;
 
 use App\Enums\Faq;
@@ -11,17 +13,6 @@ use Laravel\Cashier\Cashier;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
-    public function register(): void
-    {
-        //
-    }
-
-    /**
-     * Bootstrap any application services.
-     */
     public function boot(): void
     {
         if (config('app.env') === 'production') {
@@ -30,11 +21,56 @@ class AppServiceProvider extends ServiceProvider
 
         Cashier::calculateTaxes();
 
-        SEOTools::addImages(asset('img/preview.png'));
+        // Définition de l'image par défaut pour OpenGraph et Twitter
+        SEOTools::addImages([asset('img/preview.png')]);
 
-        // Breadcrumb JSON-LD
-        SEOTools::jsonLd()->addValues([
-            '@context'        => 'https://schema.org',
+        // Construction du JSON-LD
+        $jsonLdData = [
+            '@context' => 'https://schema.org',
+            '@graph'   => [],
+        ];
+
+        // Organisation
+        $organization = [
+            '@type'        => 'Organization',
+            'name'         => 'Site Éclair',
+            'url'          => config('app.url'),
+            'logo'         => asset('img/logo.svg'),
+            'sameAs'       => [
+                'https://www.linkedin.com/company/theforgeagency',
+                'https://www.instagram.com/site_eclair/',
+            ],
+            'contactPoint' => [
+                '@type'             => 'ContactPoint',
+                'telephone'         => '+33760487334', // Remplacez par votre numéro de téléphone
+                'contactType'       => 'customer service',
+                'areaServed'        => 'FR',
+                'availableLanguage' => ['French'],
+                'email'             => 'hello@siteeclair.fr',
+            ],
+            'address'      => [
+                '@type'           => 'PostalAddress',
+                'streetAddress'   => '1 rue de Stockholm', // Remplacez par votre adresse
+                'addressLocality' => 'Paris', // Remplacez par votre ville
+                'postalCode'      => '75008', // Remplacez par votre code postal
+                'addressCountry'  => 'FR',
+            ],
+        ];
+
+        // Site web
+        $website = [
+            '@type'           => 'WebSite',
+            'name'            => 'Site Éclair',
+            'url'             => config('app.url'),
+            'potentialAction' => [
+                '@type'       => 'SearchAction',
+                'target'      => config('app.url') . '/search?q={search_term_string}',
+                'query-input' => 'required name=search_term_string',
+            ],
+        ];
+
+        // Fil d'Ariane
+        $breadcrumbList = [
             '@type'           => 'BreadcrumbList',
             'itemListElement' => [
                 [
@@ -46,26 +82,26 @@ class AppServiceProvider extends ServiceProvider
                 [
                     '@type'    => 'ListItem',
                     'position' => 2,
-                    'name'     => 'À propos',
-                    'item'     => config('app.url') . '#about',
+                    'name'     => 'Pourquoi Nous',
+                    'item'     => config('app.url') . '#features',
                 ],
                 [
                     '@type'    => 'ListItem',
                     'position' => 3,
-                    'name'     => 'Méthode',
+                    'name'     => 'Processus',
                     'item'     => config('app.url') . '#method',
                 ],
                 [
                     '@type'    => 'ListItem',
                     'position' => 4,
-                    'name'     => 'Services',
-                    'item'     => config('app.url') . '#features',
+                    'name'     => 'Offres',
+                    'item'     => config('app.url') . '#pricing',
                 ],
                 [
                     '@type'    => 'ListItem',
                     'position' => 5,
-                    'name'     => 'Témoignages',
-                    'item'     => config('app.url') . '#testimonials',
+                    'name'     => 'Équipe',
+                    'item'     => config('app.url') . '#team',
                 ],
                 [
                     '@type'    => 'ListItem',
@@ -73,17 +109,11 @@ class AppServiceProvider extends ServiceProvider
                     'name'     => 'FAQ',
                     'item'     => config('app.url') . '#faq',
                 ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 7,
-                    'name'     => 'Offres',
-                    'item'     => config('app.url') . '#pricing',
-                ],
             ],
-        ]);
+        ];
 
-        SEOTools::jsonLd()->addValues([
-            '@context'   => 'https://schema.org',
+        // Page FAQ
+        $faqPage = [
             '@type'      => 'FAQPage',
             'mainEntity' => array_map(function (Faq $faq) {
                 return [
@@ -94,59 +124,122 @@ class AppServiceProvider extends ServiceProvider
                         'text'  => $faq->getAnswer(),
                     ],
                 ];
-            },  Faq::cases()),
-        ]);
+            }, Faq::cases()),
+        ];
 
-        SEOTools::jsonLd()->addValues([
-            '@context'        => 'https://schema.org',
-            '@type'           => 'ItemList',
-            'itemListElement' => array_map(function (Offer $offer) {
-                return [
-                    '@type'           => 'Product',
-                    'name'            => $offer->getTitle(),
-                    'description'     => $offer->description(),
-                    'image'           => file_exists(public_path("img/{$offer->value}.webp"))
-                        ? asset("img/{$offer->value}.webp")
-                        : asset("img/default.webp"),
-                    'offers'          => $offer->price() !== 'Sur Devis' ? [
-                        '@type'                   => 'Offer',
-                        'priceCurrency'           => 'EUR',
-                        'price'                   => filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION),
-                        'availability'            => 'https://schema.org/InStock',
-                        'priceValidUntil'         => now()->addYear()->toISOString(),
-                        'url'                     => config('app.url') . '/preorder/' . $offer->value,
-                        'shippingDetails'         => [
-                            '@type'               => 'OfferShippingDetails',
-                            'doesNotShip'         => true,
-                            'shippingDestination' => [
-                                [
-                                    '@type'          => 'DefinedRegion',
-                                    'addressCountry' => 'FR', // Ajoutez le pays de livraison ici.
-                                ],
-                            ],
-                        ],
-                        'hasMerchantReturnPolicy' => [
-                            '@type'                => 'MerchantReturnPolicy',
-                            'returnPolicyCategory' => 'https://schema.org/NoReturns',
-                            'applicableCountry'    => 'FR', // Ajoutez le pays applicable pour la politique de retour.
-                        ],
-                    ] : [
-                        '@type'        => 'Demand',
-                        'availability' => 'https://schema.org/InStock',
-                        'url'          => config('app.url') . '/preorder/' . $offer->value,
-                    ],
-                    'brand'           => [
-                        '@type' => 'Brand',
-                        'name'  => 'Site Éclair',
-                    ],
-                    'aggregateRating' => [
-                        '@type'       => 'AggregateRating',
-                        'ratingValue' => '4.9',
-                        'reviewCount' => '124',
-                    ],
+        // Offres (Produits)
+        $offersData = array_map(function (Offer $offer) {
+            $productData = [
+                '@type'           => 'Product',
+                'name'            => $offer->getTitle(),
+                'description'     => $offer->description(),
+                'image'           => asset("img/{$offer->value}.webp"),
+                'brand'           => [
+                    '@type' => 'Brand',
+                    'name'  => 'Site Éclair',
+                ],
+                'aggregateRating' => [
+                    '@type'       => 'AggregateRating',
+                    'ratingValue' => '4.9',
+                    'reviewCount' => '124',
+                ],
+            ];
+
+            if ($offer->price() !== 'Sur Devis') {
+                $price = filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+
+                $productData['offers'] = [
+                    '@type'           => 'Offer',
+                    'priceCurrency'   => 'EUR',
+                    'price'           => $price,
+                    'availability'    => 'https://schema.org/InStock',
+                    'url'             => config('app.url') . '/preorder/' . $offer->value,
+                    'priceValidUntil' => now()->addYear()->format('Y-m-d'),
                 ];
-            }, Offer::cases()),
-        ]);
+            } else {
+                $productData['offers'] = [
+                    '@type'         => 'Offer',
+                    'priceCurrency' => 'EUR',
+                    'price'         => '0.00',
+                    'availability'  => 'https://schema.org/InStock',
+                    'url'           => config('app.url') . '/preorder/' . $offer->value,
+                ];
+            }
+
+            return $productData;
+        }, Offer::cases());
+
+        // Témoignages (Avis)
+        $testimonials = [
+            [
+                'name'    => 'Diag Power',
+                'content' => 'Une équipe très professionnelle qui sait de quoi elle parle. Qualité au rendez-vous, merci beaucoup pour votre travail. Vassili a su créer une plateforme et un site parfaitement adaptés à nos besoins.',
+            ],
+            // Ajoutez d'autres témoignages ici
+        ];
+
+        // Témoignages (Avis)
+        $testimonials = [
+            [
+                'name'    => 'Diag Power',
+                'content' => 'Une équipe très professionnelle qui sait de quoi elle parle. Qualité au rendez-vous, merci beaucoup pour votre travail. Vassili a su créer une plateforme et un site parfaitement adaptés à nos besoins.',
+                'date'    => '2023-01-15',
+            ],
+            [
+                'name'    => 'Stephen',
+                'content' => 'Intervention rapide et irréprochable. Les solutions proposées dépassent nos attentes. Site Éclair a amélioré notre organisation et notre productivité.',
+                'date'    => '2023-02-10',
+            ],
+            [
+                'name'    => 'Michael',
+                'content' => 'Excellente collaboration avec Vassili. Compréhension parfaite des enjeux et objectifs. Grâce à TFA, nous avons développé une solution sur mesure et évolutive.',
+                'date'    => '2023-03-05',
+            ],
+            [
+                'name'    => 'Morine Mallet',
+                'content' => 'Rapide et efficace ! Site Éclair est toujours présent, même pour des missions complexes. Je recommande pour leur professionnalisme et leur engagement.',
+                'date'    => '2023-04-20',
+            ],
+            [
+                'name'    => 'Tanguy',
+                'content' => 'Je recommande vivement le travail de Vassili pour le développement d\'API. TFA a créé une solution stable et adaptée à nos besoins. Professionnalisme et rapidité au rendez-vous !',
+                'date'    => '2023-05-18',
+            ],
+            [
+                'name'    => 'Yannick Le Vaillant',
+                'content' => 'Excellent prestataire : rapide, efficace et investi. Grâce à TFA, nous avons intégré des solutions digitales innovantes en un temps record. Je recommande vivement pour son expertise et son engagement.',
+                'date'    => '2023-06-12',
+            ],
+        ];
+
+        $reviewData = array_map(function ($testimonial) {
+            return [
+                '@type'         => 'Review',
+                'reviewRating'  => [
+                    '@type'       => 'Rating',
+                    'ratingValue' => '5',
+                    'bestRating'  => '5',
+                ],
+                'author'        => [
+                    '@type' => 'Person',
+                    'name'  => $testimonial['name'],
+                ],
+                'reviewBody'    => $testimonial['content'],
+                'datePublished' => $testimonial['date'],
+            ];
+        }, $testimonials);
+
+        // Combinaison de toutes les données JSON-LD
+        $jsonLdData['@graph'] = array_merge(
+            [$organization],
+            [$website],
+            [$breadcrumbList],
+            [$faqPage],
+            $offersData,
+            $reviewData
+        );
+
+        // Ajout du JSON-LD à SEOTools
+        SEOTools::jsonLd()->addValues($jsonLdData);
     }
 }
-

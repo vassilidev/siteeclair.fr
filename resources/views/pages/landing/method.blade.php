@@ -1,10 +1,10 @@
 <section id="method" class="py-20 bg-section-background">
     <div class="container mx-auto px-4">
         <h2 class="text-center text-2xl md:text-3xl font-bold text-primary-dark mb-4">
-            ⚡ Notre Méthode de Travail
+            ⚡ Notre Processus Simplifié
         </h2>
         <p class="text-center mb-8 text-gray-800">
-            Votre site livré en 1 semaine chrono, prêt à être utilisé et modifié en toute autonomie.
+            Un site web professionnel, livré en 5 jours, prêt à propulser votre entreprise.
         </p>
         <div class="relative max-w-2xl mx-auto">
             <div class="absolute left-8 top-0 h-full w-px bg-gradient-to-b from-primary-dark to-accent-dark hidden md:block"></div>
