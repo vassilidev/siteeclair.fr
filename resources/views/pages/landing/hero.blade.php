@@ -1,10 +1,11 @@
 <section class="relative min-h-screen-with-navbar flex items-center justify-center text-white">
+    <img src="{{ asset('img/banner.webp') }}" alt="Bannière de fond" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
     <div class="absolute inset-0 bg-black opacity-80"></div>
     <div class="relative z-10 text-center px-4">
-        <h1 class="font-bold mb-6">
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">
             ⚡ Votre site web sur-mesure, performant et rapide 🚀
         </h1>
-        <p class="mb-8">
+        <p class="text-xl md:text-1xl mb-8">
             ⏱️ Livré en 5 jours, avec nom de domaine, hébergement, et ajustements illimités inclus.
         </p>
         <a href="#about"
