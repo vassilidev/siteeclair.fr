@@ -11,3 +11,7 @@ Route::post('/preorder/{offer}', [PreorderController::class, 'store'])->name('pr
 Route::get('/order/success/{order}', [PreorderController::class, 'success'])->name('order.success');
 
 Route::view('/contact', 'pages.contact')->name('contact');
+
+Route::get('/sitemap.xml', function () {
+    return \Spatie\Sitemap\SitemapGenerator::create(config('app.url'))->getSitemap();
+})->name('sitemap');

@@ -82,9 +82,7 @@ class AppServiceProvider extends ServiceProvider
             ],
         ]);
 
-        // FAQ JSON-LD
-        $faqItems = Faq::cases();
-        $faqSchema = [
+        SEOTools::jsonLd()->addValues([
             '@context'   => 'https://schema.org',
             '@type'      => 'FAQPage',
             'mainEntity' => array_map(function (Faq $faq) {
@@ -96,10 +94,8 @@ class AppServiceProvider extends ServiceProvider
                         'text'  => $faq->getAnswer(),
                     ],
                 ];
-            }, $faqItems),
-        ];
-
-        SEOTools::jsonLd()->addValues($faqSchema);
+            },  Faq::cases()),
+        ]);
 
         SEOTools::jsonLd()->addValues([
             '@context'        => 'https://schema.org',
