@@ -28,6 +28,6 @@ class AppServiceProvider extends ServiceProvider
 
         Cashier::calculateTaxes();
 
-        SEOTools::addImages(asset('img/banner.png'));
+        SEOTools::addImages(asset('img/preview.png'));
     }
 }
