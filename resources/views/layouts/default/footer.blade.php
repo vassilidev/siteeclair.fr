@@ -26,10 +26,10 @@
                 <div class="flex space-x-4">
                     <a href="https://www.linkedin.com/company/votrepage" class="hover:text-accent"
                        aria-label="Linkedin">
-                        <i class="fab fa-linkedin-in fa-lg"></i>
+                        @svg('fab-linkedin', 'h-6 w-6')
                     </a>
                     <a href="https://www.instagram.com/site_eclair/" class="hover:text-accent" aria-label="Instagram">
-                        <i class="fab fa-instagram fa-lg"></i>
+                        @svg('fab-instagram', 'h-6 w-6')
                     </a>
                 </div>
             </div>
@@ -44,8 +44,7 @@
         </div>
         <!-- Footer Bottom -->
         <div class="text-center">
-            <p>
-                Réalisé avec le <i class="fas fa-heart text-pink-500"></i> par
+                Réalisé avec le par @svg('fas-heart', 'inline-block h-4 w-4 text-pink-500') par
                 <a href="https://the-forge.agency/" class="hover:text-accent">TFA - The Forge Agency</a>
             </p>
         </div>

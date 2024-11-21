@@ -16,14 +16,14 @@ enum Feature: string
     public function icon(): string
     {
         return match ($this) {
-            self::PERFORMANCE => 'fa-tachometer-alt',
-            self::SECURITY => 'fa-shield-alt',
-            self::INTUITIVE => 'fa-user-edit',
-            self::SCALABILITY => 'fa-cogs',
-            self::MULTILINGUAL => 'fa-language',
-            self::MODIFICATIONS => 'fa-infinity',
-            self::DOMAIN_HOSTING => 'fa-globe',
-            self::PRICING => 'fa-tags',
+            self::PERFORMANCE => 'fas-tachometer-alt',
+            self::SECURITY => 'fas-shield-alt',
+            self::INTUITIVE => 'fas-user-edit',
+            self::SCALABILITY => 'fas-cogs',
+            self::MULTILINGUAL => 'fas-language',
+            self::MODIFICATIONS => 'fas-infinity',
+            self::DOMAIN_HOSTING => 'fas-globe',
+            self::PRICING => 'fas-tags',
         };
     }
 

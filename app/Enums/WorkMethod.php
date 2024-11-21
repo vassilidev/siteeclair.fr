@@ -35,11 +35,11 @@ enum WorkMethod: string
     public function icon(): string
     {
         return match ($this) {
-            self::PAYMENT => 'fa-credit-card',
-            self::VALIDATION => 'fa-calendar-check',
-            self::DESIGN => 'fa-pencil-ruler',
-            self::DEPLOYMENT => 'fa-check',
-            self::FEEDBACK => 'fa-sync-alt',
+            self::PAYMENT => 'fas-credit-card',
+            self::VALIDATION => 'fas-calendar-check',
+            self::DESIGN => 'fas-pencil-ruler',
+            self::DEPLOYMENT => 'fas-check',
+            self::FEEDBACK => 'fas-sync-alt',
         };
     }
 }

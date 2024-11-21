@@ -18,7 +18,10 @@
                 <div class="text-3xl font-bold {{ $offer->isCustom() ? 'text-black' : 'text-primary' }} mb-4">{{ $offer->price() }}</div>
                 <ul class="mb-6 space-y-2 flex-grow">
                     @foreach ($offer->features() as $feature)
-                        <li><i class="fas fa-check text-primary mr-2"></i>{{ $feature }}</li>
+                        <li>
+                            @svg('fas-check', 'inline-block h-4 w-4 text-primary mr-2')
+                            {{ $feature }}
+                        </li>
                     @endforeach
                 </ul>
                 <a href="{{ route('preorder', $offer) }}"

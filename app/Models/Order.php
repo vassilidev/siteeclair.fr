@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\Offer;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -27,6 +28,13 @@ class Order extends Model
         'special_requirements',
         'status',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'offer' => Offer::class,
+        ];
+    }
 
     /**
      * Relationship: An order belongs to a user.

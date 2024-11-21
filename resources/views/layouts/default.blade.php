@@ -36,21 +36,6 @@
 
 @include('layouts.default.footer')
 
-@production
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6723c2382480f5b4f596de67/1ibhqtb7o';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-@endproduction
-
-<script defer src="https://kit.fontawesome.com/8d4e15b026.js" crossorigin="anonymous"></script>
 <script defer src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

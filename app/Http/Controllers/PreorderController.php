@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Enums\Offer;
 use App\Http\Requests\PreOrderRequest;
+use App\Mail\OrderConfirmation;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class PreorderController extends Controller
@@ -59,13 +61,19 @@ class PreorderController extends Controller
 
         return $user->allowPromotionCodes()
             ->checkout([$offer->getStripePriceId() => 1], [
-                'success_url' => route('order.success', $order),
+                'success_url' => route('order.success', ['order' => $order]),
                 'cancel_url'  => route('preorder', ['offer' => $offer]),
             ]);
     }
 
     public function success(Order $order)
     {
+        if ($order->status === 'pending') {
+            $order->update(['status' => 'paid']);
+
+            Mail::to($order->user)->send(new OrderConfirmation($order));
+        }
+
         return view('pages.orderSuccess', compact('order'));
     }
 }

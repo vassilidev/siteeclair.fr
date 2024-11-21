@@ -13,7 +13,7 @@ return new class extends Migration {
     {
         Schema::create('orders', static function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->unsignedInteger('number')->unique();
+            $table->string('number')->unique();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->string('offer');
             $table->text('goals')->nullable();

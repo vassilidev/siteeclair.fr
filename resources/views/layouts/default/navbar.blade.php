@@ -6,7 +6,7 @@
         </a>
         <div class="md:hidden">
             <button id="mobile-menu-button" class="text-text focus:outline-none" aria-label="Menu">
-                <i class="fas fa-bars fa-2x"></i>
+                @svg('fas-bars', 'h-6 w-6')
             </button>
         </div>
         <div id="navbar-links" class="hidden md:flex space-x-6 items-center">

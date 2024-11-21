@@ -5,7 +5,7 @@
             <div class="border-b border-gray-300 py-4">
                 <button class="w-full text-left font-semibold text-lg flex justify-between items-center faq-question">
                     {{ $faq->getQuestion() }}
-                    <i class="fas fa-chevron-down"></i>
+                    @svg('fas-chevron-down', 'h-4 w-4')
                 </button>
                 <div class="mt-2 text-gray-700 faq-answer hidden">
                     {{ $faq->getAnswer() }}

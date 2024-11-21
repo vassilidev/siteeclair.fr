@@ -29,7 +29,7 @@
                         <div class="flex items-center group">
                             <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300
                             {{ $loop->first ? 'bg-gray-300 text-gray-700 scale-110' : 'bg-gradient-to-br from-primary to-accent text-white group-hover:scale-110' }}">
-                                <i class="fas {{ $step->icon() }} fa-lg"></i>
+                                <x-dynamic-component :component="$step->icon()" class="h-6 w-6"/>
                             </div>
                             <div class="ml-4">
                                 <h3 class="text-xl font-semibold {{ $loop->first ? 'text-gray-700' : 'text-primary group-hover:text-accent transition-colors duration-300' }}">
