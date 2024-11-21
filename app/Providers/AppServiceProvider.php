@@ -120,12 +120,19 @@ class AppServiceProvider extends ServiceProvider
                         'priceValidUntil'         => now()->addYear()->toISOString(),
                         'url'                     => config('app.url') . '/preorder/' . $offer->value,
                         'shippingDetails'         => [
-                            '@type'       => 'OfferShippingDetails',
-                            'doesNotShip' => true,
+                            '@type'               => 'OfferShippingDetails',
+                            'doesNotShip'         => true,
+                            'shippingDestination' => [
+                                [
+                                    '@type'          => 'DefinedRegion',
+                                    'addressCountry' => 'FR', // Ajoutez le pays de livraison ici.
+                                ],
+                            ],
                         ],
                         'hasMerchantReturnPolicy' => [
                             '@type'                => 'MerchantReturnPolicy',
                             'returnPolicyCategory' => 'https://schema.org/NoReturns',
+                            'applicableCountry'    => 'FR', // Ajoutez le pays applicable pour la politique de retour.
                         ],
                     ] : [
                         '@type'        => 'Demand',
