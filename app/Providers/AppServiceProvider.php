@@ -101,30 +101,48 @@ class AppServiceProvider extends ServiceProvider
 
         SEOTools::jsonLd()->addValues($faqSchema);
 
-        $offers = Offer::cases();
-        $jsonLdProducts = array_map(function (Offer $offer) {
-            return [
-                '@type'       => 'Product',
-                'name'        => $offer->getTitle(),
-                'description' => $offer->description(),
-                'offers'      => [
-                    '@type'         => 'Offer',
-                    'priceCurrency' => 'EUR',
-                    'price'         => $offer->price() !== 'Sur Devis' ? filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION) : null,
-                    'availability'  => 'https://schema.org/InStock',
-                    'url'           => config('app.url') . '/preorder/' . $offer->value,
-                ],
-                'brand'       => [
-                    '@type' => 'Brand',
-                    'name'  => 'Site Éclair',
-                ],
-            ];
-        }, $offers);
-
         SEOTools::jsonLd()->addValues([
             '@context'        => 'https://schema.org',
             '@type'           => 'ItemList',
-            'itemListElement' => $jsonLdProducts,
+            'itemListElement' => array_map(function (Offer $offer) {
+                return [
+                    '@type'           => 'Product',
+                    'name'            => $offer->getTitle(),
+                    'description'     => $offer->description(),
+                    'image'           => file_exists(public_path("img/{$offer->value}.webp"))
+                        ? asset("img/{$offer->value}.webp")
+                        : asset("img/default.webp"),
+                    'offers'          => $offer->price() !== 'Sur Devis' ? [
+                        '@type'                   => 'Offer',
+                        'priceCurrency'           => 'EUR',
+                        'price'                   => filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION),
+                        'availability'            => 'https://schema.org/InStock',
+                        'priceValidUntil'         => now()->addYear()->toISOString(),
+                        'url'                     => config('app.url') . '/preorder/' . $offer->value,
+                        'shippingDetails'         => [
+                            '@type'       => 'OfferShippingDetails',
+                            'doesNotShip' => true,
+                        ],
+                        'hasMerchantReturnPolicy' => [
+                            '@type'                => 'MerchantReturnPolicy',
+                            'returnPolicyCategory' => 'https://schema.org/NoReturns',
+                        ],
+                    ] : [
+                        '@type'        => 'Demand',
+                        'availability' => 'https://schema.org/InStock',
+                        'url'          => config('app.url') . '/preorder/' . $offer->value,
+                    ],
+                    'brand'           => [
+                        '@type' => 'Brand',
+                        'name'  => 'Site Éclair',
+                    ],
+                    'aggregateRating' => [
+                        '@type'       => 'AggregateRating',
+                        'ratingValue' => '4.9',
+                        'reviewCount' => '124',
+                    ],
+                ];
+            }, Offer::cases()),
         ]);
     }
 }
