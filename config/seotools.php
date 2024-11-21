@@ -21,7 +21,7 @@ return [
             'url'         => null, // L'URL sera automatiquement définie
             'type'        => 'website',
             'site_name'   => 'Site Éclair',
-            'images'      => [asset('img/preview.png')],
+            'images'      => [],
         ],
     ],
     'twitter'   => [
@@ -36,7 +36,7 @@ return [
             'description' => "Créez un site web rapide, performant et personnalisé en seulement 5 jours avec Site Éclair. Hébergement, nom de domaine et support inclus. Solutions idéales pour TPE et PME.",
             'url'         => null, // L'URL sera automatiquement définie
             'type'        => 'WebSite',
-            'images'      => [asset('img/preview.png')],
+            'images'      => [],
         ],
     ],
 ];
