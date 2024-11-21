@@ -1,6 +1,15 @@
-<section class="relative min-h-screen-with-navbar flex items-center justify-center text-white">
-    <img src="{{ asset('img/banner.webp') }}" alt="Bannière de fond" class="absolute inset-0 w-full h-full object-cover">
+<section class="relative min-h-screen flex items-center justify-center text-white">
+    <!-- Hero Image -->
+    <img
+            src="{{ asset('img/banner.webp') }}"
+            alt="Bannière de fond"
+            class="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            width="1920"
+            height="1080">
+    <!-- Overlay -->
     <div class="absolute inset-0 bg-black opacity-80"></div>
+    <!-- Hero Content -->
     <div class="relative z-10 text-center px-4">
         <h1 class="text-3xl md:text-4xl font-bold mb-6">
             ⚡ Votre site web sur-mesure, performant et rapide 🚀
