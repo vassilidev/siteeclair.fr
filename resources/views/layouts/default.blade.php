@@ -2,27 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @production
-        <!-- Google Tag Manager -->
-        <script async>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    'gtm.start': new Date().getTime(),
-                    event: 'gtm.js'
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != 'dataLayer' ? '&l=' + l : '';
-                j.async = true;
-                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-WHLWX54B');
-        </script>
-        <!-- End Google Tag Manager -->
-
-        <!-- Google Tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZVBPQXE8HG"></script>
-        <script async>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ"></script>
+        <script>
             window.dataLayer = window.dataLayer || [];
 
             function gtag() {
@@ -30,10 +12,8 @@
             }
 
             gtag('js', new Date());
-            gtag('config', 'G-ZVBPQXE8HG', {
-                'anonymize_ip': true,
-                'send_page_view': false, // Ajout pour minimiser l'impact
-            });
+
+            gtag('config', 'G-5PKBP589HJ');
         </script>
     @endproduction
 
@@ -42,7 +22,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
 
     <link rel="preload" href="{{ asset('img/logo.svg') }}" as="image">
@@ -66,15 +45,6 @@
     {!! JsonLd::generate(); !!}
 </head>
 <body class="font-poppins text-text bg-background overflow-x-hidden">
-@production
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHLWX54B" height="0" width="0"
-                style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-@endproduction
-
 <div id="cursor"></div>
 
 @include('layouts.default.navbar')
