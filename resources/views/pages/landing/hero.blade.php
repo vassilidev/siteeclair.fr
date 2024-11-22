@@ -15,19 +15,18 @@
 
     <!-- Hero Content -->
     <div class="relative z-10 flex items-center justify-center flex-grow px-6">
-        <div class="text-center w-full max-w-[92%] sm:max-w-[80%] lg:max-w-[60%]">
+        <div class="text-center w-full sm:max-w-[90%]">
             <!-- Title -->
             <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
             </h1>
             <!-- Description -->
-            <p class="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8">
-                Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5
-                jours.
+            <p class="text-sm text-gray-300 leading-relaxed mb-8">
+                Obtenez un site professionnel avec domaine, hébergement et retours illimités, livré en 5 jours.
             </p>
             <!-- Call to Action -->
             <a href="#about"
-               class="inline-block bg-accent hover:bg-primary text-white font-bold py-4 px-6 sm:py-3 sm:px-10 md:py-4 md:px-12 rounded-full transition duration-300 shadow-lg">
+               class="inline-block bg-accent hover:bg-primary text-white font-bold py-2 px-3 rounded-full transition duration-300 shadow-lg">
                 Lancez votre projet dès maintenant
             </a>
         </div>
