@@ -18,7 +18,7 @@
         <div class="text-center w-full sm:max-w-[90%]">
             <!-- Title -->
             <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
+                Un site web sur-mesure, en ligne en un éclair ⚡
             </h1>
             <!-- Description -->
             <p class="text-sm text-gray-300 leading-relaxed mb-8">

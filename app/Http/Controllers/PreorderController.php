@@ -7,6 +7,7 @@ use App\Http\Requests\PreOrderRequest;
 use App\Mail\OrderConfirmation;
 use App\Models\Order;
 use App\Models\User;
+use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -18,6 +19,8 @@ class PreorderController extends Controller
         if ($offer->isCustom()) {
             return redirect()->route('contact');
         }
+
+        SEOTools::setTitle("Offre {$offer->getTitle()}");
 
         return view('pages.preorder', compact('offer'));
     }
@@ -68,6 +71,8 @@ class PreorderController extends Controller
 
     public function success(Order $order)
     {
+        SEOTools::setTitle('Commande Confirmée');
+
         if ($order->status === 'pending') {
             $order->update(['status' => 'paid']);
 

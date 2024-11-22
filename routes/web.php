@@ -11,7 +11,7 @@ Route::get('/preorder/{offer}', [PreorderController::class, 'view'])->name('preo
 Route::post('/preorder/{offer}', [PreorderController::class, 'store'])->name('preorder.store');
 Route::get('/order/success/{order}', [PreorderController::class, 'success'])->name('order.success');
 
-Route::view('/contact', 'pages.contact')->name('contact');
+Route::get('/contact', [LandingController::class, 'contact'])->name('contact');
 
 Route::get('/sitemap.xml', function () {
     $sitemap = Sitemap::create()

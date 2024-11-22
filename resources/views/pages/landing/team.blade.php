@@ -1,6 +1,6 @@
 <section id="team" class="py-20 bg-section-background">
     <div class="container mx-auto px-4">
-        <h2 class="text-center text-2xl md:text-3xl font-bold text-primary-dark mb-4">⚡ Découvrez l'Équipe</h2>
+        <h2 class="text-center text-2xl md:text-3xl font-bold text-primary-dark mb-4">Découvrez l'Équipe</h2>
         <p class="text-center mb-8 text-gray-700">
             <strong>TFA - The Forge Agency</strong>, experts en transformation digitale, réalise les sites de Site Éclair avec passion et savoir-faire.
         </p>
