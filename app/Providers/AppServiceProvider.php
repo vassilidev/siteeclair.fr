@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
             'url'          => config('app.url'),
             'logo'         => asset('img/logo.svg'),
             'sameAs'       => [
-                'https://www.linkedin.com/company/theforgeagency',
+                'https://www.linkedin.com/company/tfa-the-forge-agency',
                 'https://www.instagram.com/site_eclair/',
             ],
             'contactPoint' => [
@@ -128,6 +128,59 @@ class AppServiceProvider extends ServiceProvider
         ];
 
         $offersData = array_map(function (Offer $offer) {
+            $price = ($offer->price() !== 'Sur Devis')
+                ? filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION)
+                : '0.00';
+
+            // Délais de livraison spécifiques à chaque offre
+            $deliveryTime = match ($offer) {
+                Offer::FORMULE_ECLAIR => [
+                    '@type'        => 'ShippingDeliveryTime',
+                    'handlingTime' => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 0,
+                        'maxValue' => 1,
+                        'unitCode' => 'd', // Temps de traitement
+                    ],
+                    'transitTime'  => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 5,
+                        'maxValue' => 5,
+                        'unitCode' => 'd', // Temps de livraison
+                    ],
+                ],
+                Offer::FORMULE_FOUDRE => [
+                    '@type'        => 'ShippingDeliveryTime',
+                    'handlingTime' => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 0,
+                        'maxValue' => 1,
+                        'unitCode' => 'd', // Temps de traitement
+                    ],
+                    'transitTime'  => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 7,
+                        'maxValue' => 15,
+                        'unitCode' => 'd', // Temps de livraison
+                    ],
+                ],
+                Offer::FORMULE_TEMPETE => [
+                    '@type'        => 'ShippingDeliveryTime',
+                    'handlingTime' => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 0,
+                        'maxValue' => 1,
+                        'unitCode' => 'd', // Temps de traitement
+                    ],
+                    'transitTime'  => [
+                        '@type'    => 'QuantitativeValue',
+                        'minValue' => 15,
+                        'maxValue' => 30,
+                        'unitCode' => 'd', // Temps de livraison
+                    ],
+                ],
+            };
+
             $productData = [
                 '@type'           => 'Product',
                 'name'            => $offer->getTitle(),
@@ -140,36 +193,33 @@ class AppServiceProvider extends ServiceProvider
                 'aggregateRating' => [
                     '@type'       => 'AggregateRating',
                     'ratingValue' => '4.9',
-                    'reviewCount' => '124',
+                    'reviewCount' => '96',
                 ],
-            ];
-
-            $price = ($offer->price() !== 'Sur Devis')
-                ? filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION)
-                : '0.00';
-
-            $productData['offers'] = [
-                '@type'                   => 'Offer',
-                'priceCurrency'           => 'EUR',
-                'price'                   => $price,
-                'availability'            => 'https://schema.org/InStock',
-                'url'                     => config('app.url') . '/preorder/' . $offer->value,
-                'priceValidUntil'         => now()->addYear()->format('Y-m-d'),
-                'hasMerchantReturnPolicy' => [
-                    '@type'                => 'MerchantReturnPolicy',
-                    'returnPolicyCategory' => 'https://schema.org/NoReturns',
-                ],
-                'shippingDetails'         => [
-                    '@type'               => 'OfferShippingDetails',
-                    'shippingDestination' => [
-                        '@type'          => 'DefinedRegion',
-                        'addressCountry' => 'FR',
+                'offers'          => [
+                    '@type'                   => 'Offer',
+                    'priceCurrency'           => 'EUR',
+                    'price'                   => $price,
+                    'availability'            => 'https://schema.org/InStock',
+                    'url'                     => config('app.url') . '/preorder/' . $offer->value,
+                    'priceValidUntil'         => now()->addYear()->format('Y-m-d'),
+                    'hasMerchantReturnPolicy' => [
+                        '@type'                => 'MerchantReturnPolicy',
+                        'applicableCountry'    => 'FR', // Pays d'application de la politique de retour
+                        'returnPolicyCategory' => 'https://schema.org/ExchangeOnly', // Politique valide pour les produits numériques
                     ],
-                    'deliveryMethod'      => 'https://schema.org/DownloadAction',
-                    'shippingRate'        => [
-                        '@type'    => 'MonetaryAmount',
-                        'value'    => '0.00',
-                        'currency' => 'EUR',
+                    'shippingDetails'         => [
+                        '@type'               => 'OfferShippingDetails',
+                        'shippingDestination' => [
+                            '@type'          => 'DefinedRegion',
+                            'addressCountry' => 'FR', // Pays où le produit est disponible
+                        ],
+                        'deliveryMethod'      => 'https://schema.org/DownloadAction', // Livraison numérique
+                        'shippingRate'        => [
+                            '@type'    => 'MonetaryAmount',
+                            'value'    => '0.00', // Gratuit
+                            'currency' => 'EUR',
+                        ],
+                        'deliveryTime'        => $deliveryTime, // Délais spécifiques à l'offre
                     ],
                 ],
             ];
