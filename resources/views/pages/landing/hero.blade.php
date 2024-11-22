@@ -13,10 +13,10 @@
     <!-- Hero Content -->
     <div class="flex items-center justify-center flex-grow z-10 pb-4">
         <div class="text-center px-4">
-            <h1 class="text-2xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 class="text-2xl md:text-5xl font-bold mb-4 leading-tight mx-auto md:max-w-full">
                 ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
             </h1>
-            <p class="text-md md:text-xl mb-8 text-gray-300">
+            <p class="text-sm md:text-xl text-gray-300 leading-snug mb-6 max-w-xs md:max-w-md mx-auto">
                 Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5
                 jours.
             </p>
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Badges Section -->
-    <div class="flex justify-center flex-wrap gap-3 md:gap-4 z-10 mb-6 px-4">
+    <div class="flex justify-center flex-wrap gap-2 md:gap-4 z-10 mb-6 px-4">
         <div
                 class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             💎 <span>Design Personnalisé</span>
