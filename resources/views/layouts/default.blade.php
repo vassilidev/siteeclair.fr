@@ -2,17 +2,14 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     @production
-        <!-- Google tag (gtag.js) -->
+        <!-- Google Tag Manager -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-
             function gtag() {
                 dataLayer.push(arguments);
             }
-
             gtag('js', new Date());
-
             gtag('config', 'G-5PKBP589HJ');
         </script>
     @endproduction
@@ -20,20 +17,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com">
 
+    <!-- Preload images -->
     <link rel="preload" href="{{ asset('img/logo.svg') }}" as="image">
     <link rel="preload" href="{{ asset('img/banner.webp') }}" as="image" type="image/webp">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-          as="style">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"
-          media="print" onload="this.media='all'">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
 
+    <!-- Favicon and Manifest -->
     <link rel="icon" type="image/png" href="{{ asset('img/favicon-96x96.png') }}" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="{{ asset('img/favicon.svg') }}">
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
@@ -41,6 +39,7 @@
     <meta name="apple-mobile-web-app-title" content="Site éclair">
     <link rel="manifest" href="{{ asset('img/site.webmanifest') }}">
 
+    <!-- SEO -->
     {!! SEO::generate() !!}
     {!! JsonLd::generate(); !!}
 </head>
