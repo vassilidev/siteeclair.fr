@@ -13,13 +13,16 @@
     <!-- Hero Content -->
     <div class="flex items-center justify-center flex-grow z-10 pb-4">
         <div class="text-center px-4">
-            <h1 class="text-2xl md:text-5xl font-bold mb-4 leading-tight mx-auto md:max-w-full">
+            <!-- Title -->
+            <h1 class="text-xl md:text-5xl font-bold mb-4 leading-tight mx-auto">
                 ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
             </h1>
-            <p class="text-sm md:text-xl text-gray-300 leading-snug mb-6 max-w-xs md:max-w-md mx-auto">
+            <!-- Description -->
+            <p class="text-xs md:text-lg text-gray-300 leading-relaxed mb-6 mx-auto">
                 Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5
                 jours.
             </p>
+            <!-- Call to Action -->
             <a href="#about"
                class="inline-block bg-accent hover:bg-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
                 Lancez votre projet dès maintenant

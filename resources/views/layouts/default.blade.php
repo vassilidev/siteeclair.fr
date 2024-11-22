@@ -1,32 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @production
-        <!-- Google Tag Manager -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'G-5PKBP589HJ');
-        </script>
-    @endproduction
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Preconnect for fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Preload images -->
     <link rel="preload" href="{{ asset('img/logo.svg') }}" as="image">
     <link rel="preload" href="{{ asset('img/banner.webp') }}" as="image" type="image/webp">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
@@ -53,6 +33,19 @@
 </main>
 
 @include('layouts.default.footer')
+
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-5PKBP589HJ');
+</script>
 
 <script defer src="{{ asset('js/app.js') }}"></script>
 </body>
