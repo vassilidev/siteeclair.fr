@@ -13,11 +13,12 @@
     <!-- Hero Content -->
     <div class="flex items-center justify-center flex-grow z-10 pb-4">
         <div class="text-center px-4">
-            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 class="text-2xl md:text-5xl font-bold mb-6 leading-tight">
                 ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
             </h1>
-            <p class="text-lg md:text-xl mb-8 text-gray-300">
-                Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5 jours.
+            <p class="text-md md:text-xl mb-8 text-gray-300">
+                Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5
+                jours.
             </p>
             <a href="#about"
                class="inline-block bg-accent hover:bg-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">

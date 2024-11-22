@@ -77,7 +77,7 @@ class AppServiceProvider extends ServiceProvider
                     '@type'    => 'ListItem',
                     'position' => 1,
                     'name'     => 'Accueil',
-                    'item'     => config('app.url'),
+                    'item'     => config('app.url') . '#about',
                 ],
                 [
                     '@type'    => 'ListItem',
@@ -118,16 +118,15 @@ class AppServiceProvider extends ServiceProvider
             'mainEntity' => array_map(function (Faq $faq) {
                 return [
                     '@type'          => 'Question',
-                    'name'           => $faq->getQuestion(),
+                    'name'           => $this->removeEmoji($faq->getQuestion()),
                     'acceptedAnswer' => [
                         '@type' => 'Answer',
-                        'text'  => $faq->getAnswer(),
+                        'text'  => $this->removeEmoji($faq->getAnswer()),
                     ],
                 ];
             }, Faq::cases()),
         ];
 
-        // Offres (Produits)
         $offersData = array_map(function (Offer $offer) {
             $productData = [
                 '@type'           => 'Product',
@@ -145,89 +144,38 @@ class AppServiceProvider extends ServiceProvider
                 ],
             ];
 
-            if ($offer->price() !== 'Sur Devis') {
-                $price = filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+            $price = ($offer->price() !== 'Sur Devis')
+                ? filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION)
+                : '0.00';
 
-                $productData['offers'] = [
-                    '@type'           => 'Offer',
-                    'priceCurrency'   => 'EUR',
-                    'price'           => $price,
-                    'availability'    => 'https://schema.org/InStock',
-                    'url'             => config('app.url') . '/preorder/' . $offer->value,
-                    'priceValidUntil' => now()->addYear()->format('Y-m-d'),
-                ];
-            } else {
-                $productData['offers'] = [
-                    '@type'         => 'Offer',
-                    'priceCurrency' => 'EUR',
-                    'price'         => '0.00',
-                    'availability'  => 'https://schema.org/InStock',
-                    'url'           => config('app.url') . '/preorder/' . $offer->value,
-                ];
-            }
+            $productData['offers'] = [
+                '@type'                   => 'Offer',
+                'priceCurrency'           => 'EUR',
+                'price'                   => $price,
+                'availability'            => 'https://schema.org/InStock',
+                'url'                     => config('app.url') . '/preorder/' . $offer->value,
+                'priceValidUntil'         => now()->addYear()->format('Y-m-d'),
+                'hasMerchantReturnPolicy' => [
+                    '@type'                => 'MerchantReturnPolicy',
+                    'returnPolicyCategory' => 'https://schema.org/NoReturns',
+                ],
+                'shippingDetails'         => [
+                    '@type'               => 'OfferShippingDetails',
+                    'shippingDestination' => [
+                        '@type'          => 'DefinedRegion',
+                        'addressCountry' => 'FR',
+                    ],
+                    'deliveryMethod'      => 'https://schema.org/DownloadAction',
+                    'shippingRate'        => [
+                        '@type'    => 'MonetaryAmount',
+                        'value'    => '0.00',
+                        'currency' => 'EUR',
+                    ],
+                ],
+            ];
 
             return $productData;
         }, Offer::cases());
-
-        // Témoignages (Avis)
-        $testimonials = [
-            [
-                'name'    => 'Diag Power',
-                'content' => 'Une équipe très professionnelle qui sait de quoi elle parle. Qualité au rendez-vous, merci beaucoup pour votre travail. Vassili a su créer une plateforme et un site parfaitement adaptés à nos besoins.',
-            ],
-            // Ajoutez d'autres témoignages ici
-        ];
-
-        // Témoignages (Avis)
-        $testimonials = [
-            [
-                'name'    => 'Diag Power',
-                'content' => 'Une équipe très professionnelle qui sait de quoi elle parle. Qualité au rendez-vous, merci beaucoup pour votre travail. Vassili a su créer une plateforme et un site parfaitement adaptés à nos besoins.',
-                'date'    => '2023-01-15',
-            ],
-            [
-                'name'    => 'Stephen',
-                'content' => 'Intervention rapide et irréprochable. Les solutions proposées dépassent nos attentes. Site Éclair a amélioré notre organisation et notre productivité.',
-                'date'    => '2023-02-10',
-            ],
-            [
-                'name'    => 'Michael',
-                'content' => 'Excellente collaboration avec Vassili. Compréhension parfaite des enjeux et objectifs. Grâce à TFA, nous avons développé une solution sur mesure et évolutive.',
-                'date'    => '2023-03-05',
-            ],
-            [
-                'name'    => 'Morine Mallet',
-                'content' => 'Rapide et efficace ! Site Éclair est toujours présent, même pour des missions complexes. Je recommande pour leur professionnalisme et leur engagement.',
-                'date'    => '2023-04-20',
-            ],
-            [
-                'name'    => 'Tanguy',
-                'content' => 'Je recommande vivement le travail de Vassili pour le développement d\'API. TFA a créé une solution stable et adaptée à nos besoins. Professionnalisme et rapidité au rendez-vous !',
-                'date'    => '2023-05-18',
-            ],
-            [
-                'name'    => 'Yannick Le Vaillant',
-                'content' => 'Excellent prestataire : rapide, efficace et investi. Grâce à TFA, nous avons intégré des solutions digitales innovantes en un temps record. Je recommande vivement pour son expertise et son engagement.',
-                'date'    => '2023-06-12',
-            ],
-        ];
-
-        $reviewData = array_map(function ($testimonial) {
-            return [
-                '@type'         => 'Review',
-                'reviewRating'  => [
-                    '@type'       => 'Rating',
-                    'ratingValue' => '5',
-                    'bestRating'  => '5',
-                ],
-                'author'        => [
-                    '@type' => 'Person',
-                    'name'  => $testimonial['name'],
-                ],
-                'reviewBody'    => $testimonial['content'],
-                'datePublished' => $testimonial['date'],
-            ];
-        }, $testimonials);
 
         // Combinaison de toutes les données JSON-LD
         $jsonLdData['@graph'] = array_merge(
@@ -236,10 +184,19 @@ class AppServiceProvider extends ServiceProvider
             [$breadcrumbList],
             [$faqPage],
             $offersData,
-            $reviewData
         );
 
-        // Ajout du JSON-LD à SEOTools
         SEOTools::jsonLd()->addValues($jsonLdData);
+    }
+
+    private function removeEmoji(string $string): string
+    {
+        $string = str_replace("?", "{%}", $string);
+        $string = mb_convert_encoding($string, "ISO-8859-1", "UTF-8");
+        $string = mb_convert_encoding($string, "UTF-8", "ISO-8859-1");
+        $string = preg_replace('/(\s?\?\s?)/', ' ', $string);
+        $string = str_replace("{%}", "?", $string);
+
+        return trim($string);
     }
 }
