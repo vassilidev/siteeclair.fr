@@ -34,17 +34,24 @@
 
 @include('layouts.default.footer')
 
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
+    setTimeout(function() {
+        var script = document.createElement('script');
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-5PKBP589HJ";
+        script.async = true;
+        document.head.appendChild(script);
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-5PKBP589HJ');
+        script.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-5PKBP589HJ', {
+                'anonymize_ip': true,
+                'allow_google_signals': false,
+                'send_page_view': true
+            });
+        };
+    }, 3000);
 </script>
 
 <script defer src="{{ asset('js/app.js') }}"></script>

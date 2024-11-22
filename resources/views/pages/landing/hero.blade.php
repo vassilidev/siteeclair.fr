@@ -1,55 +1,58 @@
-<section class="relative h-screen text-white flex flex-col justify-between">
+<section class="relative h-screen text-white flex flex-col">
     <!-- Hero Image -->
-    <img
-            src="{{ asset('img/banner.webp') }}"
-            alt="Bannière de fond"
-            class="absolute inset-0 w-full h-full object-cover"
-            loading="eager"
-            width="1920"
-            height="1080">
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black/80"></div>
+    <div class="absolute inset-0">
+        <img
+                src="{{ asset('img/banner.webp') }}"
+                alt="Bannière de fond"
+                class="absolute inset-0 w-full h-full object-cover"
+                loading="eager"
+                width="1920"
+                height="1080"
+                class="blur-md">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/70"></div>
+    </div>
 
     <!-- Hero Content -->
-    <div class="flex items-center justify-center flex-grow z-10 pb-4">
-        <div class="text-center px-4">
+    <div class="relative z-10 flex items-center justify-center flex-grow px-6">
+        <div class="text-center w-full max-w-[92%] sm:max-w-[80%] lg:max-w-[60%]">
             <!-- Title -->
-            <h1 class="text-xl md:text-5xl font-bold mb-4 leading-tight mx-auto">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
                 ⚡ Un site web sur-mesure, en ligne en un éclair 🚀
             </h1>
             <!-- Description -->
-            <p class="text-xs md:text-lg text-gray-300 leading-relaxed mb-6 mx-auto">
+            <p class="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8">
                 Obtenez un site professionnel avec domaine, hébergement et modifications illimitées inclus, livré en 5
                 jours.
             </p>
             <!-- Call to Action -->
             <a href="#about"
-               class="inline-block bg-accent hover:bg-primary text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+               class="inline-block bg-accent hover:bg-primary text-white font-bold py-4 px-6 sm:py-3 sm:px-10 md:py-4 md:px-12 rounded-full transition duration-300 shadow-lg">
                 Lancez votre projet dès maintenant
             </a>
         </div>
     </div>
 
-    <!-- Badges Section -->
-    <div class="flex justify-center flex-wrap gap-2 md:gap-4 z-10 mb-6 px-4">
+    <!-- Badges Section (Hidden on Mobile) -->
+    <div class="hidden md:flex justify-center flex-wrap gap-3 md:gap-4 z-10 mb-8 px-6">
         <div
-                class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
+                class="bg-white rounded-full px-4 py-2 text-gray-800 text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             💎 <span>Design Personnalisé</span>
         </div>
         <div
-                class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
+                class="bg-white rounded-full px-4 py-2 text-gray-800 text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             🌐 <span>Domaine & Hébergement Inclus</span>
         </div>
         <div
-                class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
+                class="bg-white rounded-full px-4 py-2 text-gray-800 text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             🔄 <span>Modifications Illimitées</span>
         </div>
         <div
-                class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
+                class="bg-white rounded-full px-4 py-2 text-gray-800 text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             ⏱️ <span>Livraison en 5 Jours</span>
         </div>
         <div
-                class="bg-white rounded-full px-3 py-1 md:px-4 md:py-2 text-gray-800 text-xs md:text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
+                class="bg-white rounded-full px-4 py-2 text-gray-800 text-sm font-medium shadow-md transform transition duration-300 hover:-translate-y-1 flex items-center gap-2">
             🛠️ <span>Support Premium 24/7</span>
         </div>
     </div>

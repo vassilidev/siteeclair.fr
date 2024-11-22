@@ -4,6 +4,7 @@
     font-style: normal;
     font-weight: 400;
     src: url('../../public/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -11,6 +12,7 @@
     font-style: italic;
     font-weight: 400;
     src: url('../../public/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,7 @@
     font-style: normal;
     font-weight: 500;
     src: url('../../public/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -25,6 +28,7 @@
     font-style: normal;
     font-weight: 600;
     src: url('../../public/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -32,6 +36,7 @@
     font-style: normal;
     font-weight: 700;
     src: url('../../public/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -39,6 +44,7 @@
     font-style: italic;
     font-weight: 700;
     src: url('../../public/fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -46,6 +52,7 @@
     font-style: normal;
     font-weight: 900;
     src: url('../../public/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
@@ -53,6 +60,7 @@
     font-style: italic;
     font-weight: 900;
     src: url('../../public/fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* Tailwind Directives */
