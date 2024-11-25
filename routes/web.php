@@ -28,6 +28,7 @@ Route::get('/sitemap.xml', function () {
     }
 
     $sitemap->add(route('contact'));
+    $sitemap->add(route('cgs'));
 
     return $sitemap;
 })->name('sitemap');
