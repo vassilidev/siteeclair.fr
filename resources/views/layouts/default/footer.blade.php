@@ -24,7 +24,8 @@
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
                 <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/company/theforgeagency" class="hover:text-accent" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/tfa-the-forge-agency/" class="hover:text-accent"
+                       aria-label="LinkedIn">
                         @svg('fab-linkedin', 'h-6 w-6')
                     </a>
                     <a href="https://www.instagram.com/site_eclair/" class="hover:text-accent" aria-label="Instagram">
@@ -37,8 +38,7 @@
                 <h4 class="text-lg font-semibold mb-2">Informations Légales</h4>
                 <ul>
                     <li><a href="https://the-forge.agency" class="hover:text-accent">Site de l'Agence</a></li>
-                    <li><a href="/legal" class="hover:text-accent">Mentions Légales</a></li>
-                    <li><a href="/cgv" class="hover:text-accent">CGV</a></li>
+                    <li><a href="{{ route('cgs') }}" class="hover:text-accent">CGS</a></li>
                 </ul>
             </div>
         </div>

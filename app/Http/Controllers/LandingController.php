@@ -14,6 +14,14 @@ class LandingController extends Controller
         return view('pages.landing');
     }
 
+    public function cgs()
+    {
+        SEOTools::setTitle('Conditions Générales de Service');
+        SEOTools::setDescription('Consultez nos conditions générales de service pour en savoir plus sur nos prestations.');
+
+        return view('pages.cgs');
+    }
+
     public function contact()
     {
         SEOTools::setTitle('Contactez-nous');

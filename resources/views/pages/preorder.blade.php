@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-    <!-- Order Summary Section -->
     <section class="py-12 bg-gray-100 pt-20">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-primary">Confirmez Votre Commande</h2>
@@ -28,7 +27,6 @@
         </div>
     </section>
 
-    <!-- Pre-order Information Section -->
     <section class="py-12 bg-section-background">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-primary">Finalisez Votre Précommande</h2>
@@ -37,7 +35,8 @@
                 @csrf
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label for="name" class="block text-gray-800 font-semibold mb-2">Votre Nom Complet <span class="text-red-500">*</span></label>
+                        <label for="name" class="block text-gray-800 font-semibold mb-2">Votre Nom Complet <span
+                                    class="text-red-500">*</span></label>
                         <input type="text" name="name" id="name" placeholder="Prénom Nom"
                                value="{{ old('name') }}"
                                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:outline-none @error('name') border-red-500 @enderror"
@@ -69,7 +68,8 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="company" class="block text-gray-800 font-semibold mb-2">Nom de Votre Entreprise</label>
+                        <label for="company" class="block text-gray-800 font-semibold mb-2">Nom de Votre
+                            Entreprise</label>
                         <input type="text" name="company" id="company" placeholder="Votre entreprise (optionnel)"
                                value="{{ old('company') }}"
                                class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:outline-none @error('company') border-red-500 @enderror">
@@ -90,7 +90,8 @@
                             @enderror
                         </div>
                         <div>
-                            <label for="vat_number" class="block text-gray-800 font-semibold mb-2">Numéro de TVA Intracommunautaire</label>
+                            <label for="vat_number" class="block text-gray-800 font-semibold mb-2">Numéro de TVA
+                                Intracommunautaire</label>
                             <input type="text" name="vat_number" id="vat_number" placeholder="Votre numéro de TVA"
                                    value="{{ old('vat_number') }}"
                                    class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:outline-none @error('vat_number') border-red-500 @enderror">
@@ -111,7 +112,8 @@
                 @endphp
                 @foreach ($fields as $field)
                     <div class="mb-6">
-                        <label for="{{ $field['name'] }}" class="block text-gray-800 font-semibold mb-2">{{ $field['label'] }}</label>
+                        <label for="{{ $field['name'] }}"
+                               class="block text-gray-800 font-semibold mb-2">{{ $field['label'] }}</label>
                         <textarea name="{{ $field['name'] }}" id="{{ $field['name'] }}" rows="4"
                                   placeholder="{{ $field['placeholder'] }}"
                                   class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:outline-none @error($field['name']) border-red-500 @enderror">{{ old($field['name']) }}</textarea>
@@ -126,7 +128,11 @@
                         <span>Procéder au Paiement</span>
                         <span class="bg-white text-primary font-semibold py-1 px-3 rounded-lg shadow">{{ $offer->price() }}</span>
                     </button>
+                    <p class="mt-4 text-gray-600 text-sm">
+                        En continuant, vous acceptez nos <a href="{{ route('cgs') }}" class="text-primary hover:underline">Conditions Générales de Services</a>.
+                    </p>
                 </div>
+
             </form>
         </div>
     </section>
@@ -146,7 +152,8 @@
             </div>
             <div class="md:w-1/2 flex justify-center">
                 <div class="relative w-full max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white">
-                    <img src="{{ asset('img/meet.webp') }}" alt="Illustration de réunion avec notre équipe" class="w-full h-auto" loading="lazy">
+                    <img src="{{ asset('img/meet.webp') }}" alt="Illustration de réunion avec notre équipe"
+                         class="w-full h-auto" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-100 opacity-70 pointer-events-none"></div>
                 </div>
             </div>

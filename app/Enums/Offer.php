@@ -41,7 +41,7 @@ enum Offer: string
             self::FORMULE_ECLAIR => [
                 'Site One-Page Moderne et Responsive',
                 'Design Personnalisé',
-                'Formulaire de Contact Fonctionnel',
+                'Formulaire de Contact',
                 'Optimisation SEO de Base',
                 'Hébergement Inclus (1 an)',
                 'Nom de Domaine Offert (1 an)',
@@ -50,9 +50,8 @@ enum Offer: string
             self::FORMULE_FOUDRE => [
                 'Tout ce qui est inclus dans la Formule Éclair',
                 'Site Multi-Pages Professionnel',
-                'Blog Intégré pour le Contenu',
                 'Optimisation SEO Avancée',
-                'Configuration Multilingue (jusqu\'à 3 langues)',
+                'Site Multilingue',
                 'Intégration Réseaux Sociaux',
                 'Support Prioritaire 24/7',
             ],

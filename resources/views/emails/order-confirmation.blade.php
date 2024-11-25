@@ -133,7 +133,7 @@
     <div class="footer">
         <p><strong>Site Éclair</strong> - Votre site web performant en 5 jours 🚀</p>
         <p>Développé avec passion par <strong>TFA - The Forge Agency</strong></p>
-        <p>Pour toute question, n'hésitez pas à nous contacter à <a href="mailto:contact@siteeclair.fr">contact@siteeclair.fr</a></p>
+        <p>Pour toute question, n'hésitez pas à nous contacter à <a href="mailto:hello@siteeclair.fr">contact@siteeclair.fr</a></p>
     </div>
 </div>
 </body>

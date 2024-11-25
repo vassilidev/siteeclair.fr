@@ -5,7 +5,6 @@
 namespace App\Providers;
 
 use App\Enums\Faq;
-use App\Enums\Offer;
 use Artesaos\SEOTools\Facades\SEOTools;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
@@ -57,61 +56,6 @@ class AppServiceProvider extends ServiceProvider
             ],
         ];
 
-        // Site web
-        $website = [
-            '@type'           => 'WebSite',
-            'name'            => 'Site Éclair',
-            'url'             => config('app.url'),
-            'potentialAction' => [
-                '@type'       => 'SearchAction',
-                'target'      => config('app.url') . '/search?q={search_term_string}',
-                'query-input' => 'required name=search_term_string',
-            ],
-        ];
-
-        // Fil d'Ariane
-        $breadcrumbList = [
-            '@type'           => 'BreadcrumbList',
-            'itemListElement' => [
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 1,
-                    'name'     => 'Accueil',
-                    'item'     => config('app.url') . '#about',
-                ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 2,
-                    'name'     => 'Pourquoi Nous',
-                    'item'     => config('app.url') . '#features',
-                ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 3,
-                    'name'     => 'Processus',
-                    'item'     => config('app.url') . '#method',
-                ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 4,
-                    'name'     => 'Offres',
-                    'item'     => config('app.url') . '#pricing',
-                ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 5,
-                    'name'     => 'Équipe',
-                    'item'     => config('app.url') . '#team',
-                ],
-                [
-                    '@type'    => 'ListItem',
-                    'position' => 6,
-                    'name'     => 'FAQ',
-                    'item'     => config('app.url') . '#faq',
-                ],
-            ],
-        ];
-
         // Page FAQ
         $faqPage = [
             '@type'      => 'FAQPage',
@@ -127,113 +71,10 @@ class AppServiceProvider extends ServiceProvider
             }, Faq::cases()),
         ];
 
-        $offersData = array_map(function (Offer $offer) {
-            $price = ($offer->price() !== 'Sur Devis')
-                ? filter_var($offer->price(), FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION)
-                : '0.00';
-
-            // Délais de livraison spécifiques à chaque offre
-            $deliveryTime = match ($offer) {
-                Offer::FORMULE_ECLAIR => [
-                    '@type'        => 'ShippingDeliveryTime',
-                    'handlingTime' => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 0,
-                        'maxValue' => 1,
-                        'unitCode' => 'd', // Temps de traitement
-                    ],
-                    'transitTime'  => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 5,
-                        'maxValue' => 5,
-                        'unitCode' => 'd', // Temps de livraison
-                    ],
-                ],
-                Offer::FORMULE_FOUDRE => [
-                    '@type'        => 'ShippingDeliveryTime',
-                    'handlingTime' => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 0,
-                        'maxValue' => 1,
-                        'unitCode' => 'd', // Temps de traitement
-                    ],
-                    'transitTime'  => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 7,
-                        'maxValue' => 15,
-                        'unitCode' => 'd', // Temps de livraison
-                    ],
-                ],
-                Offer::FORMULE_TEMPETE => [
-                    '@type'        => 'ShippingDeliveryTime',
-                    'handlingTime' => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 0,
-                        'maxValue' => 1,
-                        'unitCode' => 'd', // Temps de traitement
-                    ],
-                    'transitTime'  => [
-                        '@type'    => 'QuantitativeValue',
-                        'minValue' => 15,
-                        'maxValue' => 30,
-                        'unitCode' => 'd', // Temps de livraison
-                    ],
-                ],
-            };
-
-            $productData = [
-                '@type'           => 'Product',
-                'name'            => $offer->getTitle(),
-                'description'     => $offer->description(),
-                'image'           => asset("img/{$offer->value}.webp"),
-                'brand'           => [
-                    '@type' => 'Brand',
-                    'name'  => 'Site Éclair',
-                ],
-                'aggregateRating' => [
-                    '@type'       => 'AggregateRating',
-                    'ratingValue' => '4.9',
-                    'reviewCount' => '96',
-                ],
-                'offers'          => [
-                    '@type'                   => 'Offer',
-                    'priceCurrency'           => 'EUR',
-                    'price'                   => $price,
-                    'availability'            => 'https://schema.org/InStock',
-                    'url'                     => config('app.url') . '/preorder/' . $offer->value,
-                    'priceValidUntil'         => now()->addYear()->format('Y-m-d'),
-                    'hasMerchantReturnPolicy' => [
-                        '@type'                => 'MerchantReturnPolicy',
-                        'applicableCountry'    => 'FR', // Pays d'application de la politique de retour
-                        'returnPolicyCategory' => 'https://schema.org/ExchangeOnly', // Politique valide pour les produits numériques
-                    ],
-                    'shippingDetails'         => [
-                        '@type'               => 'OfferShippingDetails',
-                        'shippingDestination' => [
-                            '@type'          => 'DefinedRegion',
-                            'addressCountry' => 'FR', // Pays où le produit est disponible
-                        ],
-                        'deliveryMethod'      => 'https://schema.org/DownloadAction', // Livraison numérique
-                        'shippingRate'        => [
-                            '@type'    => 'MonetaryAmount',
-                            'value'    => '0.00', // Gratuit
-                            'currency' => 'EUR',
-                        ],
-                        'deliveryTime'        => $deliveryTime, // Délais spécifiques à l'offre
-                    ],
-                ],
-            ];
-
-            return $productData;
-        }, Offer::cases());
-
         // Combinaison de toutes les données JSON-LD
         $jsonLdData['@graph'] = array_merge(
             [$organization],
-            [$website],
-            [$breadcrumbList],
             [$faqPage],
-            $offersData,
         );
 
         SEOTools::jsonLd()->addValues($jsonLdData);
