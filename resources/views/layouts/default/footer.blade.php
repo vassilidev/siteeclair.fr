@@ -24,7 +24,7 @@
             <div class="w-full md:w-1/4 mb-6 md:mb-0">
                 <h4 class="text-lg font-semibold mb-2">Suivez-nous</h4>
                 <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/company/tfa-the-forge-agency/" class="hover:text-accent"
+                    <a href="https://www.linkedin.com/showcase/siteeclair/" class="hover:text-accent"
                        aria-label="LinkedIn">
                         @svg('fab-linkedin', 'h-6 w-6')
                     </a>

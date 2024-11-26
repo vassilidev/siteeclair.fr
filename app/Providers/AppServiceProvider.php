@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
             'url'          => config('app.url'),
             'logo'         => asset('img/logo.svg'),
             'sameAs'       => [
-                'https://www.linkedin.com/company/tfa-the-forge-agency',
+                'https://www.linkedin.com/showcase/siteeclair/',
                 'https://www.instagram.com/site_eclair/',
             ],
             'contactPoint' => [
