@@ -29,8 +29,8 @@ enum Offer: string
     public function price(): string
     {
         return match ($this) {
-            self::FORMULE_ECLAIR => '490 € HT',
-            self::FORMULE_FOUDRE => '790 € HT',
+            self::FORMULE_ECLAIR => '790 € HT',
+            self::FORMULE_FOUDRE => '1090 € HT',
             self::FORMULE_TEMPETE => 'Sur Devis',
         };
     }

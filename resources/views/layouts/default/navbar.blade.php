@@ -17,8 +17,6 @@
             <a href="{{ route('landing') }}#method" class="text-white hover:text-accent transition duration-300">Processus</a>
             <a href="{{ route('landing') }}#features" class="text-white hover:text-accent transition duration-300">Pourquoi
                 Nous</a>
-            <a href="{{ route('landing') }}#team"
-               class="text-white hover:text-accent transition duration-300">Équipe</a>
             <a href="{{ route('landing') }}#faq" class="text-white hover:text-accent transition duration-300">FAQ</a>
             <a href="{{ route('landing') }}#offers"
                class="bg-accent hover:bg-primary text-white font-bold py-2 px-4 rounded-full transition duration-300">
@@ -33,8 +31,6 @@
         <a href="{{ route('landing') }}#method" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Processus</a>
         <a href="{{ route('landing') }}#features" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Pourquoi
             Nous</a>
-        <a href="{{ route('landing') }}#team"
-           class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Équipe</a>
         <a href="{{ route('landing') }}#faq" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">FAQ</a>
         <a href="{{ route('landing') }}#offers"
            class="block py-3 px-4 bg-accent hover:bg-primary text-white font-bold transition duration-300">Offres</a>

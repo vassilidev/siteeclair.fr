@@ -11,17 +11,17 @@
         <!-- Features Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach (\App\Enums\Feature::cases() as $feature)
-                <div class="bg-white rounded-lg p-6 text-center shadow-lg transform transition-transform duration-300 hover:scale-105">
+                <div class="bg-gray-800 rounded-lg p-6 text-center shadow-lg transform transition-transform duration-300 hover:scale-105">
                     <!-- Icon -->
                     <div class="flex items-center justify-center h-16 w-16 bg-gradient-to-br from-primary to-accent text-white rounded-full mx-auto mb-4">
                         <x-dynamic-component :component="$feature->icon()" class="h-8 w-8" />
                     </div>
                     <!-- Title -->
-                    <h3 class="text-xl font-semibold text-gray-800 mb-3">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-3">
                         {{ $feature->title() }}
                     </h3>
                     <!-- Description -->
-                    <p class="text-gray-600">
+                    <p class="text-gray-300">
                         {{ $feature->description() }}
                     </p>
                 </div>
