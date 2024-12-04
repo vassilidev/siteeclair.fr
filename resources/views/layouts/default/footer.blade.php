@@ -15,7 +15,7 @@
                     <li><a href="{{ route('landing') }}#about" class="hover:text-accent">Accueil</a></li>
                     <li><a href="{{ route('landing') }}#features" class="hover:text-accent">Pourquoi Nous</a></li>
                     <li><a href="{{ route('landing') }}#method" class="hover:text-accent">Processus</a></li>
-                    <li><a href="{{ route('landing') }}#pricing" class="hover:text-accent">Offres</a></li>
+                    <li><a href="{{ route('landing') }}#offers" class="hover:text-accent">Offres</a></li>
                     <li><a href="{{ route('landing') }}#team" class="hover:text-accent">Équipe</a></li>
                     <li><a href="{{ route('landing') }}#faq" class="hover:text-accent">FAQ</a></li>
                 </ul>

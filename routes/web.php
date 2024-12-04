@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\Offer;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PreorderController;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ Route::get('/sitemap.xml', function () {
     $sitemap = Sitemap::create()
         ->add(route('landing'));
 
-    foreach (\App\Enums\Offer::cases() as $offer) {
+    foreach (Offer::cases() as $offer) {
         if ($offer->isCustom()) {
             continue;
         }

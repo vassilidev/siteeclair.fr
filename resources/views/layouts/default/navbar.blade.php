@@ -15,7 +15,7 @@
             <a href="{{ route('landing') }}#features" class="text-gray-800 hover:text-primary-dark">Pourquoi Nous</a>
             <a href="{{ route('landing') }}#team" class="text-gray-800 hover:text-primary-dark">Équipe</a>
             <a href="{{ route('landing') }}#faq" class="text-gray-800 hover:text-primary-dark">FAQ</a>
-            <a href="{{ route('landing') }}#pricing"
+            <a href="{{ route('landing') }}#offers"
                class="bg-primary-dark hover:bg-accent-dark text-white font-bold py-2 px-4 rounded transition duration-300">Offres</a>
         </div>
     </div>
@@ -26,7 +26,7 @@
             Nous</a>
         <a href="{{ route('landing') }}#team" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">Équipe</a>
         <a href="{{ route('landing') }}#faq" class="block py-2 px-4 text-gray-800 hover:bg-gray-200">FAQ</a>
-        <a href="{{ route('landing') }}#pricing"
+        <a href="{{ route('landing') }}#offers"
            class="block py-2 px-4 text-white bg-primary-dark hover:bg-accent-dark font-bold">Offres</a>
     </div>
 </nav>

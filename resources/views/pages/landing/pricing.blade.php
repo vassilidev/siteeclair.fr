@@ -1,4 +1,4 @@
-<section id="pricing" class="py-20 bg-background">
+<section id="offers" class="py-20 bg-background">
     <h2 class="text-center text-2xl md:text-3xl font-bold text-primary-dark mb-4">Nos Offres</h2>
     <p class="text-center mb-8 text-gray-800">Des solutions adaptées à chaque besoin et budget.</p>
     <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
