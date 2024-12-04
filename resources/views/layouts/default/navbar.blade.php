@@ -12,10 +12,13 @@
         </div>
         <!-- Desktop Links -->
         <div id="navbar-links" class="hidden md:flex space-x-6 items-center">
-            <a href="{{ route('landing') }}#about" class="text-white hover:text-accent transition duration-300">Accueil</a>
+            <a href="{{ route('landing') }}#about" class="text-white hover:text-accent transition duration-300">A
+                propos</a>
             <a href="{{ route('landing') }}#method" class="text-white hover:text-accent transition duration-300">Processus</a>
-            <a href="{{ route('landing') }}#features" class="text-white hover:text-accent transition duration-300">Pourquoi Nous</a>
-            <a href="{{ route('landing') }}#team" class="text-white hover:text-accent transition duration-300">Équipe</a>
+            <a href="{{ route('landing') }}#features" class="text-white hover:text-accent transition duration-300">Pourquoi
+                Nous</a>
+            <a href="{{ route('landing') }}#team"
+               class="text-white hover:text-accent transition duration-300">Équipe</a>
             <a href="{{ route('landing') }}#faq" class="text-white hover:text-accent transition duration-300">FAQ</a>
             <a href="{{ route('landing') }}#offers"
                class="bg-accent hover:bg-primary text-white font-bold py-2 px-4 rounded-full transition duration-300">
@@ -25,10 +28,13 @@
     </div>
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-black/90 text-white">
-        <a href="{{ route('landing') }}#about" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Accueil</a>
+        <a href="{{ route('landing') }}#about" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">A
+            propos</a>
         <a href="{{ route('landing') }}#method" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Processus</a>
-        <a href="{{ route('landing') }}#features" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Pourquoi Nous</a>
-        <a href="{{ route('landing') }}#team" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Équipe</a>
+        <a href="{{ route('landing') }}#features" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Pourquoi
+            Nous</a>
+        <a href="{{ route('landing') }}#team"
+           class="block py-3 px-4 hover:bg-gray-800 transition duration-300">Équipe</a>
         <a href="{{ route('landing') }}#faq" class="block py-3 px-4 hover:bg-gray-800 transition duration-300">FAQ</a>
         <a href="{{ route('landing') }}#offers"
            class="block py-3 px-4 bg-accent hover:bg-primary text-white font-bold transition duration-300">Offres</a>
